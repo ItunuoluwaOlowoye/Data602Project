@@ -1,0 +1,610 @@
+Company,Category,Item,FreeStyle Points,SmartPoints,PointsPlus
+a-w,Burgers,Baby Burger without Cheese,8.0,8.0,6.0
+a-w,Burgers,Baby Burger with Cheese,10.0,10.0,8.0
+a-w,Burgers,Beyond Meat Burger,15.0,15.0,14.0
+a-w,Burgers,Buddy Burger without Cheese,11.0,11.0,8.0
+a-w,Burgers,Buddy Burger with Cheese,13.0,13.0,9.0
+a-w,Burgers,Cheddar Bacon Uncle Burger,25.0,25.0,20.0
+a-w,Burgers,without Cheese Double Buddy Burger,13.0,13.0,11.0
+a-w,Burgers,with Cheese Double Buddy Burger,15.0,15.0,11.0
+a-w,Burgers,Double Teen Burger,23.0,23.0,18.0
+a-w,Burgers,Grandpa Burger without Cheese,25.0,25.0,20.0
+a-w,Burgers,Grandpa Burger with Cheese,27.0,27.0,21.0
+a-w,Burgers,Lettuce Wrapped Baby Burger without Cheese,4.0,4.0,3.0
+a-w,Burgers,Lettuce Wrapped Baby Burger with Cheese,6.0,6.0,4.0
+a-w,Burgers,Lettuce Wrapped Beyond Meat Burger,10.0,10.0,9.0
+a-w,Burgers,Lettuce Wrapped Buddy Burger without Cheese,7.0,7.0,5.0
+a-w,Burgers,Lettuce Wrapped Buddy Burger with Cheese,9.0,9.0,6.0
+a-w,Burgers,Lettuce Wrapped Cheddar Bacon Uncle Burger,21.0,21.0,16.0
+a-w,Burgers,without Cheese Lettuce Wrapped Double Buddy Burger,9.0,9.0,7.0
+a-w,Burgers,with Cheese Lettuce Wrapped Double Buddy Burger,12.0,12.0,8.0
+a-w,Burgers,Lettuce Wrapped Double Teen Burger,18.0,18.0,13.0
+a-w,Burgers,Lettuce Wrapped Grandpa Burger without Cheese,20.0,20.0,16.0
+a-w,Burgers,Lettuce Wrapped Grandpa Burger with Cheese,22.0,22.0,17.0
+a-w,Burgers,without Cheese Lettuce Wrapped Mama Burger,9.0,9.0,7.0
+a-w,Burgers,with Cheese Lettuce Wrapped Mama Burger,11.0,11.0,8.0
+a-w,Burgers,Single Lettuce Wrapped Mozza Burger,16.0,16.0,12.0
+a-w,Burgers,Double Lettuce Wrapped Mozza Burger,22.0,22.0,17.0
+a-w,Burgers,Lettuce Wrapped Papa Burger without Cheese,14.0,14.0,11.0
+a-w,Burgers,Lettuce Wrapped Papa Burger with Cheese,16.0,16.0,12.0
+a-w,Burgers,Lettuce Wrapped Teen Burger,12.0,12.0,8.0
+a-w,Burgers,without Cheese Mama Burger,13.0,13.0,11.0
+a-w,Burgers,with Cheese Mama Burger,15.0,15.0,12.0
+a-w,Burgers,Single Mozza Burger,21.0,21.0,16.0
+a-w,Burgers,Double Mozza Burger,27.0,27.0,21.0
+a-w,Burgers,Papa Burger without Cheese,19.0,19.0,16.0
+a-w,Burgers,Papa Burger with Cheese,21.0,21.0,17.0
+a-w,Burgers,Teen Burger,17.0,17.0,13.0
+a-w,Chicken,Bacon Ranch Chicken Wrap,7.0,8.0,7.0
+a-w,Chicken,BLT Chicken Burger,19.0,21.0,18.0
+a-w,Chicken,Chicken Buddy Burger,9.0,11.0,10.0
+a-w,Chicken,3 Piece Chicken Strips,7.0,8.0,8.0
+a-w,Chicken,5 Piece Chicken Strips,11.0,13.0,13.0
+a-w,Chicken,Chubby Chicken Burger,12.0,14.0,13.0
+a-w,Chicken,Double Chicken Buddy Burger,11.0,15.0,13.0
+a-w,Chicken,Lettuce Wrapped BLT Chicken Burger,12.0,13.0,12.0
+a-w,Chicken,Lettuce Wrapped Chicken Buddy Burger,5.0,7.0,6.0
+a-w,Chicken,Lettuce Wrapped Chubby Chicken Burger,9.0,10.0,10.0
+a-w,Chicken,Lettuce Wrapped Double Chicken Buddy Burger,7.0,10.0,9.0
+a-w,Chicken,Lettuce Wrapped Spicy Habanero Chicken Burger,9.0,10.0,10.0
+a-w,Chicken,Nashville Hot Chicken Sandwich,15.0,17.0,15.0
+a-w,Chicken,Spicy Chipotle Chicken Wrap,7.0,8.0,7.0
+a-w,Chicken,Spicy Habanero Chicken Burger,13.0,15.0,15.0
+a-w,Breakfast,All Canadian Special,27.0,29.0,24.0
+a-w,Breakfast,Bacon & Egger on English Muffin,11.0,12.0,10.0
+a-w,Breakfast,Bacon & Egger on Sesame Seed Bun,12.0,13.0,11.0
+a-w,Breakfast,Breakfast Wrap,6.0,7.0,6.0
+a-w,Breakfast,Cheese & Egger on English Muffin,10.0,11.0,9.0
+a-w,Breakfast,Cheese & Egger on Sesame Seed Bun,11.0,12.0,10.0
+a-w,Breakfast,Classic Bacon & Eggs,15.0,16.0,14.0
+a-w,Breakfast,Hash Brown,5.0,5.0,5.0
+a-w,Breakfast,Pancakes with Syrup,24.0,24.0,16.0
+a-w,Breakfast,Sausage & Cheddar on English Muffin,15.0,15.0,12.0
+a-w,Breakfast,Sausage & Cheddar on Sesame Seed Bun,16.0,16.0,13.0
+a-w,Breakfast,Sausage & Egger on English Muffin,16.0,17.0,14.0
+a-w,Breakfast,Sausage & Egger on Sesame Seed Bun,17.0,18.0,15.0
+a-w,Condiments,Barbecue Dipping Sauce,3.0,3.0,2.0
+a-w,Condiments,Chipotle Mayonnaise,12.0,12.0,11.0
+a-w,Condiments,Small Gravy,2.0,2.0,1.0
+a-w,Condiments,Regular Gravy,3.0,3.0,2.0
+a-w,Condiments,Honey Mustard Dipping Sauce,4.0,4.0,3.0
+a-w,Condiments,Jalapeno Ranch Dipping Sauce,4.0,4.0,3.0
+a-w,Condiments,Sweet & Sour Dipping Sauce,3.0,3.0,2.0
+a-w,Drinks,Small Apple Juice,10.0,10.0,5.0
+a-w,Drinks,Large Apple Juice,18.0,18.0,8.0
+a-w,Drinks,Chocolate Milk,7.0,7.0,4.0
+a-w,Drinks,Small Chocolate Milkshake,21.0,21.0,11.0
+a-w,Drinks,Large Chocolate Milkshake,35.0,35.0,19.0
+a-w,Drinks,Small Coca-Cola,9.0,9.0,4.0
+a-w,Drinks,Large Coca-Cola,15.0,15.0,7.0
+a-w,Drinks,Coffee,9.0,9.0,0.0
+a-w,Drinks,Small Diet Coke,0.0,0.0,0.0
+a-w,Drinks,Large Diet Coke,0.0,0.0,0.0
+a-w,Drinks,Small Diet Root Beer,0.0,0.0,0.0
+a-w,Drinks,Large Diet Root Beer,0.0,0.0,0.0
+a-w,Drinks,Hot Chocolate,7.0,7.0,3.0
+a-w,Drinks,Small Iced Tea,7.0,7.0,3.0
+a-w,Drinks,Large Iced Tea,12.0,12.0,5.0
+a-w,Drinks,Small Lemonade,8.0,8.0,4.0
+a-w,Drinks,Large Lemonade,17.0,17.0,6.0
+a-w,Drinks,Milk,5.0,5.0,3.0
+a-w,Drinks,Small Orange Juice,9.0,9.0,4.0
+a-w,Drinks,Large Orange Juice,15.0,15.0,7.0
+a-w,Drinks,Small Root Beer,9.0,9.0,4.0
+a-w,Drinks,Large Root Beer,16.0,16.0,7.0
+a-w,Drinks,Diet Root Beer Float,7.0,7.0,4.0
+a-w,Drinks,Regular Root Beer Float,17.0,17.0,8.0
+a-w,Drinks,Small Root Beer Milkshake,23.0,23.0,11.0
+a-w,Drinks,Large Root Beer Milkshake,35.0,35.0,19.0
+a-w,Drinks,Small Sprite,9.0,9.0,4.0
+a-w,Drinks,Large Sprite,15.0,15.0,7.0
+a-w,Drinks,Small Strawberry Milkshake,21.0,21.0,11.0
+a-w,Drinks,Large Strawberry Milkshake,35.0,35.0,19.0
+a-w,Drinks,Tea,0.0,0.0,0.0
+a-w,Drinks,Small Vanilla Milkshake,21.0,21.0,11.0
+a-w,Drinks,Large Vanilla Milkshake,35.0,35.0,19.0
+a-w,Sides,Apple Turnover,11.0,11.0,8.0
+a-w,Sides,Cherry Turnover,8.0,8.0,6.0
+a-w,Sides,Kids Fries,8.0,8.0,7.0
+a-w,Sides,Regular Fries,12.0,12.0,11.0
+a-w,Sides,Onion Rings,16.0,16.0,14.0
+a-w,Sides,Poutine,22.0,22.0,18.0
+a-w,Sides,Root Beer Lollipop,2.0,2.0,1.0
+kfc,Chicken,Extra Crispy Chicken Drumstick,4.0,4.0,4.0
+kfc,Chicken,Extra Crispy Chicken Wing,5.0,5.0,5.0
+kfc,Chicken,Extra Crispy Chicken Thigh,7.0,7.0,7.0
+kfc,Chicken,Extra Crispy Chicken Rib,6.0,7.0,8.0
+kfc,Chicken,Extra Crispy Chicken Keel,8.0,8.0,9.0
+kfc,Chicken,Hot & Spicy Chicken Drumstick,4.0,4.0,4.0
+kfc,Chicken,Hot & Spicy Chicken Wing,6.0,6.0,6.0
+kfc,Chicken,Hot & Spicy Chicken Thigh,9.0,9.0,9.0
+kfc,Chicken,Hot & Spicy Chicken Rib,8.0,9.0,9.0
+kfc,Chicken,Hot & Spicy Chicken Keel,10.0,10.0,11.0
+kfc,Chicken,Original Recipe Chicken Tender,2.0,2.0,3.0
+kfc,Chicken,Original Recipe Chicken Drumstick,3.0,3.0,4.0
+kfc,Chicken,Original Recipe Chicken Wing,4.0,4.0,4.0
+kfc,Chicken,Original Recipe Chicken Thigh,6.0,6.0,6.0
+kfc,Chicken,Original Recipe Chicken Rib,5.0,6.0,7.0
+kfc,Chicken,Original Recipe Chicken Keel,6.0,6.0,7.0
+kfc,Desserts,Chocolate Chip Cookie,6.0,6.0,4.0
+kfc,Desserts,Ice Cream Cone,9.0,9.0,5.0
+kfc,Desserts,Strawberry Swirl Cheesecake,15.0,15.0,9.0
+kfc,Drinks,7UP,15.0,15.0,7.0
+kfc,Drinks,Apple Juice,7.0,7.0,3.0
+kfc,Drinks,Aquafina Water,0.0,0.0,0.0
+kfc,Drinks,Chocolate Milk,8.0,8.0,4.0
+kfc,Drinks,Diet Pepsi,0.0,0.0,0.0
+kfc,Drinks,Dr Pepper,15.0,15.0,7.0
+kfc,Drinks,Lipton Brisk Iced Tea,11.0,11.0,5.0
+kfc,Drinks,Mountain Dew,18.0,18.0,8.0
+kfc,Drinks,Mug Root Beer,16.0,16.0,8.0
+kfc,Drinks,Orange Crush,17.0,17.0,8.0
+kfc,Drinks,Orange Juice,6.0,6.0,3.0
+kfc,Drinks,Pepsi,16.0,16.0,7.0
+kfc,Sandwiches & Wraps,Original Big Crunch Sandwich,16.0,18.0,17.0
+kfc,Sandwiches & Wraps,Spicy Big Crunch Sandwich,18.0,18.0,17.0
+kfc,Sandwiches & Wraps,Double Down,15.0,17.0,16.0
+kfc,Sandwiches & Wraps,Original Double Tender Sandwich,12.0,13.0,13.0
+kfc,Sandwiches & Wraps,Spicy Double Tender Sandwich,13.0,15.0,14.0
+kfc,Sandwiches & Wraps,Original Famous Chicken Sandwich,14.0,15.0,14.0
+kfc,Sandwiches & Wraps,Spicy Famous Chicken Sandwich,14.0,15.0,14.0
+kfc,Sandwiches & Wraps,Original Kentucky Flatbread,7.0,8.0,8.0
+kfc,Sandwiches & Wraps,Spicy Kentucky Flatbread,7.0,9.0,8.0
+kfc,Sandwiches & Wraps,Original Plant Based Sandwich,20.0,20.0,18.0
+kfc,Sandwiches & Wraps,Spicy Plant Based Sandwich,21.0,21.0,19.0
+kfc,Sandwiches & Wraps,Spicy Twister Wrap,16.0,17.0,15.0
+kfc,Sandwiches & Wraps,Twister Wrap,14.0,15.0,14.0
+kfc,Sandwiches & Wraps,Zinger Sandwich,14.0,16.0,15.0
+kfc,Sandwiches & Wraps,Zinger Twister,18.0,20.0,18.0
+kfc,Sides,Carolina Honey Mustard Dipping Sauce,3.0,3.0,2.0
+kfc,Sides,Individual Coleslaw Salad,5.0,5.0,3.0
+kfc,Sides,Medium Coleslaw Salad,10.0,10.0,8.0
+kfc,Sides,Large Coleslaw Salad,19.0,19.0,14.0
+kfc,Sides,Individual French Fries,9.0,9.0,8.0
+kfc,Sides,Medium French Fries,25.0,25.0,23.0
+kfc,Sides,Large French Fries,41.0,41.0,37.0
+kfc,Sides,Extra Large French Fries,70.0,70.0,63.0
+kfc,Sides,Individual Gravy,2.0,2.0,1.0
+kfc,Sides,Medium Gravy,4.0,4.0,3.0
+kfc,Sides,Large Gravy,7.0,7.0,6.0
+kfc,Sides,5 Piece Hot Wings,10.0,10.0,10.0
+kfc,Sides,10 Piece Hot Wings,20.0,20.0,20.0
+kfc,Sides,20 Piece Hot Wings,41.0,41.0,40.0
+kfc,Sides,Kentucky Hot Sauce,0.0,0.0,0.0
+kfc,Sides,Individual Macaroni Salad,5.0,5.0,2.0
+kfc,Sides,Medium Macaroni Salad,11.0,11.0,8.0
+kfc,Sides,Large Macaroni Salad,22.0,22.0,17.0
+kfc,Sides,Individual Mashed Potatoes,1.0,1.0,1.0
+kfc,Sides,Medium Mashed Potatoes,4.0,4.0,3.0
+kfc,Sides,Large Mashed Potatoes,8.0,8.0,7.0
+kfc,Sides,Individual Original Recipe Corn,5.0,5.0,4.0
+kfc,Sides,Medium Original Recipe Corn,16.0,16.0,12.0
+kfc,Sides,Large Original Recipe Corn,25.0,25.0,19.0
+kfc,Sides,Plant Based Popcorn Chicken,13.0,13.0,12.0
+kfc,Sides,Individual Popcorn Chicken,5.0,5.0,5.0
+kfc,Sides,Small Popcorn Chicken,8.0,10.0,10.0
+kfc,Sides,Medium Popcorn Chicken,16.0,20.0,20.0
+kfc,Sides,Large Popcorn Chicken,21.0,27.0,27.0
+kfc,Sides,Original Popcorn Chicken Poutine,26.0,28.0,24.0
+kfc,Sides,Spicy Popcorn Chicken Poutine,34.0,34.0,30.0
+kfc,Sides,Individual Potato Salad,5.0,5.0,4.0
+kfc,Sides,Medium Potato Salad,12.0,12.0,9.0
+kfc,Sides,Large Potato Salad,25.0,25.0,19.0
+kfc,Sides,Poutine,23.0,23.0,20.0
+kfc,Sides,Ranch Dipping Sauce,5.0,5.0,4.0
+kfc,Sides,Southern Plum Dipping Sauce,2.0,2.0,1.0
+kfc,Sides,Sweet & Smoky BBQ Dipping Sauce,2.0,2.0,1.0
+mcdonalds,Breakfast,Plain Bacon 'N Egg Bagel,17.0,19.0,15.0
+mcdonalds,Breakfast,Multigrain Bacon 'N Egg Bagel,18.0,20.0,16.0
+mcdonalds,Breakfast,Bacon 'N Egg McMuffin,8.0,10.0,8.0
+mcdonalds,Breakfast,"Bacon, Egg & Cheese McGriddles",12.0,14.0,10.0
+mcdonalds,Breakfast,Plain Bagel with Butter,10.0,10.0,8.0
+mcdonalds,Breakfast,Cinnamon & Raisin Bagel with Butter,11.0,11.0,8.0
+mcdonalds,Breakfast,Everything Bagel with Butter,10.0,10.0,8.0
+mcdonalds,Breakfast,Multigrain Bagel with Butter,11.0,11.0,9.0
+mcdonalds,Breakfast,Sesame Bagel with Butter,11.0,11.0,8.0
+mcdonalds,Breakfast,Plain Bagel with Cream Cheese,13.0,13.0,10.0
+mcdonalds,Breakfast,Cinnamon & Raisin Bagel with Cream Cheese,14.0,14.0,10.0
+mcdonalds,Breakfast,Everything Bagel with Cream Cheese,13.0,13.0,10.0
+mcdonalds,Breakfast,Sesame Bagel with Cream Cheese,13.0,13.0,10.0
+mcdonalds,Breakfast,Multigrain Bagel with Cream Cheese,14.0,14.0,10.0
+mcdonalds,Breakfast,Big Breakfast,21.0,21.0,17.0
+mcdonalds,Breakfast,Plain BLT Bagel,16.0,16.0,13.0
+mcdonalds,Breakfast,Multigrain BLT Bagel,18.0,18.0,14.0
+mcdonalds,Breakfast,Breakfast Burrito,8.0,9.0,7.0
+mcdonalds,Breakfast,Chicken McMuffin,10.0,11.0,10.0
+mcdonalds,Breakfast,Plain Egg LT Bagel,14.0,16.0,12.0
+mcdonalds,Breakfast,Multigrain Egg LT Bagel,14.0,16.0,13.0
+mcdonalds,Breakfast,Egg McMuffin,7.0,9.0,7.0
+mcdonalds,Breakfast,English Muffin with Butter,5.0,5.0,4.0
+mcdonalds,Breakfast,Fruit & Maple Oatmeal,12.0,12.0,7.0
+mcdonalds,Breakfast,Hash Browns,5.0,5.0,4.0
+mcdonalds,Breakfast,Hot Caramel Sundae,17.0,17.0,9.0
+mcdonalds,Breakfast,Hotcakes with Syrup & Butter,26.0,26.0,16.0
+mcdonalds,Breakfast,Feta & Tomato More-Ning McWrap,14.0,14.0,11.0
+mcdonalds,Breakfast,Bacon & Hash More-Ning McWrap,19.0,19.0,15.0
+mcdonalds,Breakfast,Sausage & Hash More-Ning McWrap,23.0,23.0,19.0
+mcdonalds,Breakfast,Cranberry Orange Muffin,15.0,15.0,10.0
+mcdonalds,Breakfast,Fruit & Fibre Muffin,15.0,15.0,10.0
+mcdonalds,Breakfast,Carrot Muffin,17.0,17.0,11.0
+mcdonalds,Breakfast,Banana Chocolate Chunk Muffin,18.0,18.0,12.0
+mcdonalds,Breakfast,Blueberry Muffin,17.0,17.0,12.0
+mcdonalds,Breakfast,Sausage 'N Egg McMuffin,12.0,14.0,11.0
+mcdonalds,Breakfast,Sausage McGriddles,15.0,15.0,11.0
+mcdonalds,Breakfast,Sausage McMuffin,13.0,13.0,10.0
+mcdonalds,Breakfast,"Sausage, Egg & Cheese McGriddles",17.0,19.0,14.0
+mcdonalds,Burgers,Bacon & Cheddar Angus,25.0,25.0,20.0
+mcdonalds,Burgers,Single Bacon 'n Crispy Onion Quarter Pounder,23.0,23.0,18.0
+mcdonalds,Burgers,Double Bacon 'n Crispy Onion Quarter Pounder,30.0,30.0,24.0
+mcdonalds,Burgers,Big Mac,17.0,17.0,14.0
+mcdonalds,Burgers,Big Mac Bacon,21.0,21.0,17.0
+mcdonalds,Burgers,Cheeseburger,10.0,10.0,8.0
+mcdonalds,Burgers,Double Big Mac,22.0,22.0,18.0
+mcdonalds,Burgers,Double Big Mac Bacon,26.0,26.0,22.0
+mcdonalds,Burgers,Double Cheeseburger,14.0,14.0,11.0
+mcdonalds,Burgers,Double Quarter Pounder without Cheese,21.0,21.0,17.0
+mcdonalds,Burgers,Double Quarter Pounder with Cheese,24.0,24.0,20.0
+mcdonalds,Burgers,Double Quarter Pounder BLT,30.0,30.0,24.0
+mcdonalds,Burgers,Double Western BBQ Quarter Pounder,28.0,28.0,23.0
+mcdonalds,Burgers,Hamburger,8.0,8.0,6.0
+mcdonalds,Burgers,McDouble,12.0,12.0,10.0
+mcdonalds,Burgers,Mighty Angus Original,26.0,26.0,21.0
+mcdonalds,Burgers,Montreal Steak Spice BBQ Angus,23.0,23.0,19.0
+mcdonalds,Burgers,Quarter Pounder without Cheese,14.0,14.0,11.0
+mcdonalds,Burgers,Quarter Pounder with Cheese,17.0,17.0,14.0
+mcdonalds,Burgers,Quarter Pounder BLT,20.0,20.0,16.0
+mcdonalds,Burgers,Western BBQ Quarter Pounder,21.0,21.0,17.0
+mcdonalds,Chicken McNuggets,4 Piece Chicken McNuggets,3.0,5.0,4.0
+mcdonalds,Chicken McNuggets,6 Piece Chicken McNuggets,5.0,7.0,7.0
+mcdonalds,Chicken McNuggets,10 Piece Chicken McNuggets,9.0,11.0,11.0
+mcdonalds,Chicken McNuggets,20 Piece Chicken McNuggets,20.0,22.0,22.0
+mcdonalds,Desserts,Baked Apple Pie,11.0,11.0,7.0
+mcdonalds,Desserts,Snack Size Cadbury Creme Egg McFlurry,21.0,21.0,12.0
+mcdonalds,Desserts,Regular Cadbury Creme Egg McFlurry,32.0,32.0,17.0
+mcdonalds,Desserts,Small Chocolate Triple Thick Milkshake,28.0,28.0,15.0
+mcdonalds,Desserts,Medium Chocolate Triple Thick Milkshake,38.0,38.0,21.0
+mcdonalds,Desserts,Large Chocolate Triple Thick Milkshake,57.0,57.0,31.0
+mcdonalds,Desserts,Hot Fudge Sundae,18.0,18.0,9.0
+mcdonalds,Desserts,Snack Size M&M's McFlurry,21.0,21.0,11.0
+mcdonalds,Desserts,Regular M&M's McFlurry,32.0,32.0,17.0
+mcdonalds,Desserts,Snack Size Oreo McFlurry,17.0,17.0,9.0
+mcdonalds,Desserts,Regular Oreo McFlurry,28.0,28.0,16.0
+mcdonalds,Desserts,Child Size Shamrock Shake,24.0,24.0,14.0
+mcdonalds,Desserts,Small Shamrock Shake,26.0,26.0,15.0
+mcdonalds,Desserts,Medium Shamrock Shake,36.0,36.0,20.0
+mcdonalds,Desserts,Large Shamrock Shake,55.0,55.0,31.0
+mcdonalds,Desserts,Snack Size Skor McFlurry,19.0,19.0,10.0
+mcdonalds,Desserts,Regular Skor McFlurry,27.0,27.0,15.0
+mcdonalds,Desserts,Snack Size Squishmallows McFlurry,20.0,20.0,11.0
+mcdonalds,Desserts,Regular Squishmallows McFlurry,31.0,31.0,17.0
+mcdonalds,Desserts,Small Strawberry Triple Thick Milkshake,27.0,27.0,15.0
+mcdonalds,Desserts,Medium Strawberry Triple Thick Milkshake,37.0,37.0,20.0
+mcdonalds,Desserts,Large Strawberry Triple Thick Milkshake,57.0,57.0,31.0
+mcdonalds,Desserts,Strawberry Yogurt Tube,1.0,1.0,1.0
+mcdonalds,Desserts,Vanilla Ice Cream Cone,11.0,11.0,6.0
+mcdonalds,Desserts,Small Vanilla Triple Thick Milkshake,26.0,26.0,15.0
+mcdonalds,Desserts,Medium Vanilla Triple Thick Milkshake,35.0,35.0,20.0
+mcdonalds,Desserts,Large Vanilla Triple Thick Milkshake,54.0,54.0,30.0
+mcdonalds,Happy Meals,Cheeseburger Happy Meal,23.0,23.0,17.0
+mcdonalds,Happy Meals,Chicken McNuggets Happy Meal,11.0,12.0,9.0
+mcdonalds,Happy Meals,Grilled Chicken Snack Wrap Happy Meal,11.0,12.0,9.0
+mcdonalds,Happy Meals,Crispy Chicken Snack Wrap Happy Meal,14.0,15.0,11.0
+mcdonalds,Happy Meals,Hamburger Happy Meal,14.0,14.0,10.0
+mcdonalds,Happy Meals,Hotcakes Happy Meal,19.0,19.0,13.0
+mcdonalds,Salads,Caesar Side Salad,5.0,5.0,4.0
+mcdonalds,Salads,Garden Fresh Side Salad,1.0,1.0,1.0
+mcdonalds,Salads,I'm Greek-ing Out Salad with Grilled Chicken,6.0,8.0,8.0
+mcdonalds,Salads,I'm Greek-ing Out Salad with Crispy Chicken,11.0,13.0,12.0
+mcdonalds,Salads,"Keep Calm, Caesar On Salad with Grilled Chicken",9.0,11.0,9.0
+mcdonalds,Salads,"Keep Calm, Caesar On Salad with Crispy Chicken",14.0,16.0,13.0
+mcdonalds,Sandwiches & Wraps,Grilled Chicken & Bacon Signature McWrap,12.0,14.0,13.0
+mcdonalds,Sandwiches & Wraps,Crispy Chicken & Bacon Signature McWrap,16.0,18.0,16.0
+mcdonalds,Sandwiches & Wraps,Chicken Big Mac,17.0,19.0,17.0
+mcdonalds,Sandwiches & Wraps,Grilled Chicken BLT Sandwich,14.0,16.0,15.0
+mcdonalds,Sandwiches & Wraps,Crispy Chicken BLT Sandwich,19.0,21.0,19.0
+mcdonalds,Sandwiches & Wraps,Chicken Caesar McWrap Grilled,10.0,11.0,11.0
+mcdonalds,Sandwiches & Wraps,Chicken Caesar McWrap Crispy,15.0,17.0,15.0
+mcdonalds,Sandwiches & Wraps,"Grilled Chicken, Tomato & Mozzarella Sandwich",12.0,14.0,13.0
+mcdonalds,Sandwiches & Wraps,"Crispy Chicken, Tomato & Mozzarella Sandwich",18.0,20.0,17.0
+mcdonalds,Sandwiches & Wraps,Grilled Chipotle Chicken Snack Wrap,5.0,7.0,6.0
+mcdonalds,Sandwiches & Wraps,Crispy Chipotle Chicken Snack Wrap,7.0,9.0,8.0
+mcdonalds,Sandwiches & Wraps,Double Filet-O-Fish,15.0,17.0,15.0
+mcdonalds,Sandwiches & Wraps,Filet-O-Fish,10.0,12.0,11.0
+mcdonalds,Sandwiches & Wraps,Junior Chicken,10.0,12.0,10.0
+mcdonalds,Sandwiches & Wraps,McChicken,13.0,15.0,13.0
+mcdonalds,Sandwiches & Wraps,McCrispy,13.0,15.0,14.0
+mcdonalds,Sandwiches & Wraps,McCrispy Bacon Deluxe,16.0,17.0,16.0
+mcdonalds,Sandwiches & Wraps,Grilled Ranch Chicken Snack Wrap,5.0,7.0,6.0
+mcdonalds,Sandwiches & Wraps,Crispy Ranch Chicken Snack Wrap,7.0,9.0,8.0
+mcdonalds,Sandwiches & Wraps,Southern BBQ Sandwich with Grilled Chicken,13.0,15.0,13.0
+mcdonalds,Sandwiches & Wraps,Southern BBQ Sandwich with Crispy Chicken,18.0,20.0,17.0
+mcdonalds,Sandwiches & Wraps,Spicier Szechuan McChicken,14.0,15.0,13.0
+mcdonalds,Sandwiches & Wraps,Spiciest Ghost Pepper McChicken,13.0,15.0,13.0
+mcdonalds,Sandwiches & Wraps,Spicy Habanero McChicken,13.0,15.0,13.0
+mcdonalds,Sandwiches & Wraps,Sweet Chili Signature McWrap with Grilled Chicken,10.0,12.0,11.0
+mcdonalds,Sandwiches & Wraps,Sweet Chili Signature McWrap with Crispy Chicken,14.0,16.0,14.0
+mcdonalds,Sides,Apple Slices,2.0,2.0,1.0
+mcdonalds,Sides,Brownie RMHC Cookie,6.0,6.0,4.0
+mcdonalds,Sides,Chewy Oatmeal Caramel RMHC Cookie,7.0,7.0,5.0
+mcdonalds,Sides,Chocolate Chunk RMHC Cookie,7.0,7.0,4.0
+mcdonalds,Sides,Mini French Fries,4.0,4.0,3.0
+mcdonalds,Sides,Small French Fries,7.0,7.0,6.0
+mcdonalds,Sides,Medium French Fries,11.0,11.0,9.0
+mcdonalds,Sides,Large French Fries,17.0,17.0,15.0
+mcdonalds,Sides,Poutine,17.0,17.0,14.0
+mcdonalds,Sides,Spicy Buffalo Chicken Poutine,31.0,33.0,27.0
+subway,Rice Bowls,Crispy Chicken Bacon & Peppercorn Ranch Rice Bowl,23.0,24.0,22.0
+subway,Rice Bowls,Green Goddess Veggie Rice Bowl,23.0,23.0,19.0
+subway,Rice Bowls,Southwest Steak & Avocado Rice Bowl,19.0,19.0,16.0
+subway,Rice Bowls,Sweet Onion Chicken Teriyaki Rice Bowl,15.0,17.0,13.0
+subway,Rice Wraps,Crispy Chicken Bacon & Peppercorn Ranch Rice Wrap,26.0,27.0,25.0
+subway,Rice Wraps,Green Goddess Veggie Rice Wrap,24.0,24.0,20.0
+subway,Rice Wraps,Southwest Steak & Avocado Rice Wrap,25.0,25.0,21.0
+subway,Rice Wraps,Sweet Onion Chicken Teriyaki Rice Wrap,21.0,22.0,18.0
+subway,Salads,Black Forest Ham Salad,3.0,3.0,3.0
+subway,Salads,Cold Cut Combo Salad,8.0,8.0,6.0
+subway,Salads,Italian BMT Salad,8.0,8.0,7.0
+subway,Salads,Sweet Onion Chicken Teriyaki Salad,8.0,9.0,6.0
+subway,Salads,Tuna Salad,8.0,9.0,7.0
+subway,Salads,Turkey Breast Salad,3.0,3.0,3.0
+subway,Salads,Veggie Delight Salad,2.0,2.0,1.0
+subway,Subway Sandwiches,Kids Mini Sub Black Forest Ham,5.0,5.0,5.0
+subway,Subway Sandwiches,"6"" Black Forest Ham",8.0,8.0,7.0
+subway,Subway Sandwiches,Footlong Black Forest Ham,16.0,16.0,14.0
+subway,Subway Sandwiches,"6"" Chicken & Bacon Ranch",14.0,16.0,14.0
+subway,Subway Sandwiches,Footlong Chicken & Bacon Ranch,29.0,32.0,28.0
+subway,Subway Sandwiches,"6"" Cold Cut Combo",14.0,14.0,11.0
+subway,Subway Sandwiches,Footlong Cold Cut Combo,28.0,28.0,23.0
+subway,Subway Sandwiches,"6"" Italian B.M.T.",13.0,13.0,11.0
+subway,Subway Sandwiches,Footlong Italian B.M.T.,26.0,26.0,21.0
+subway,Subway Sandwiches,"6"" Meatball Marinara",16.0,16.0,12.0
+subway,Subway Sandwiches,Footlong Meatball Marinara,32.0,32.0,25.0
+subway,Subway Sandwiches,"6"" Oven Roasted Chicken",7.0,9.0,8.0
+subway,Subway Sandwiches,Footlong Oven Roasted Chicken,14.0,17.0,16.0
+subway,Subway Sandwiches,Footlong Pizza Sub Melt,6.0,6.0,23.0
+subway,Subway Sandwiches,"6"" Pizza Sub Melt",15.0,15.0,12.0
+subway,Subway Sandwiches,Kids Mini Sub Roast Beef,6.0,6.0,5.0
+subway,Subway Sandwiches,"6"" Roast Beef",8.0,8.0,7.0
+subway,Subway Sandwiches,Footlong Roast Beef,17.0,17.0,15.0
+subway,Subway Sandwiches,"6"" Steak & Cheese",11.0,11.0,10.0
+subway,Subway Sandwiches,Footlong Steak & Cheese,22.0,22.0,20.0
+subway,Subway Sandwiches,"6"" Subway Club",8.0,8.0,8.0
+subway,Subway Sandwiches,Footlong Subway Club,17.0,17.0,15.0
+subway,Subway Sandwiches,"6"" Sweet Onion Chicken Teriyaki",10.0,11.0,9.0
+subway,Subway Sandwiches,Footlong Sweet Onion Chicken Teriyaki,19.0,22.0,18.0
+subway,Subway Sandwiches,"6"" Tuna",15.0,15.0,13.0
+subway,Subway Sandwiches,Footlong Tuna,30.0,30.0,25.0
+subway,Subway Sandwiches,Kids Mini Sub Turkey Breast,5.0,5.0,5.0
+subway,Subway Sandwiches,"6"" Turkey Breast",8.0,8.0,7.0
+subway,Subway Sandwiches,Footlong Turkey Breast,17.0,17.0,14.0
+subway,Subway Sandwiches,"6"" Turkey Breast & Ham",8.0,8.0,7.0
+subway,Subway Sandwiches,Footlong Turkey Breast & Ham,17.0,17.0,15.0
+subway,Subway Sandwiches,Kids Mini Sub Veggie Delite,3.0,5.0,4.0
+subway,Subway Sandwiches,"6"" Veggie Delite",5.0,7.0,6.0
+subway,Subway Sandwiches,Footlong Veggie Delite,12.0,14.0,12.0
+tim-hortons,Bagels,12 Grain Bagel,10.0,10.0,9.0
+tim-hortons,Bagels,Cheese and Chive Bagel,10.0,10.0,8.0
+tim-hortons,Bagels,Cinnamon Raisin Bagel,10.0,10.0,8.0
+tim-hortons,Bagels,Everything Bagel,9.0,9.0,8.0
+tim-hortons,Bagels,Four Cheese Bagel,9.0,9.0,8.0
+tim-hortons,Bagels,Jalapeno Asiago Mozzarella Bagel,9.0,9.0,8.0
+tim-hortons,Bagels,Maple Cinnamon French Toast Bagel,12.0,12.0,9.0
+tim-hortons,Bagels,Plain Bagel,9.0,9.0,7.0
+tim-hortons,Bagels,Roasted Garlic & Cheese Bagel,9.0,9.0,8.0
+tim-hortons,Bagels,Sesame Seed Bagel,9.0,9.0,8.0
+tim-hortons,Bagels,Sundried Tomato Asiago Parm Bagel,10.0,10.0,9.0
+tim-hortons,Baked Goods & Desserts,Banana Chocolate Loaf,16.0,16.0,10.0
+tim-hortons,Baked Goods & Desserts,Carrot Cake Muffin with Walnuts,14.0,14.0,9.0
+tim-hortons,Baked Goods & Desserts,Chocolate Chip Muffin,18.0,18.0,12.0
+tim-hortons,Baked Goods & Desserts,Chocolate Chunk Cookie,11.0,11.0,6.0
+tim-hortons,Baked Goods & Desserts,Glazed Cinnamon Roll,12.0,12.0,9.0
+tim-hortons,Baked Goods & Desserts,Frosted Cinnamon Roll,15.0,15.0,10.0
+tim-hortons,Baked Goods & Desserts,Plain Croissant,10.0,10.0,7.0
+tim-hortons,Baked Goods & Desserts,Cheese Croissant,11.0,11.0,8.0
+tim-hortons,Baked Goods & Desserts,Cherry Cheese Danish,12.0,12.0,8.0
+tim-hortons,Baked Goods & Desserts,Maple Pecan Danish,14.0,14.0,10.0
+tim-hortons,Baked Goods & Desserts,Double Chocolate Cookie,12.0,12.0,7.0
+tim-hortons,Baked Goods & Desserts,Fruit Explosion Muffin,13.0,13.0,9.0
+tim-hortons,Baked Goods & Desserts,Lemon Poppyseed Loaf,14.0,14.0,9.0
+tim-hortons,Baked Goods & Desserts,Blueberry Mini Strudel,2.0,2.0,2.0
+tim-hortons,Baked Goods & Desserts,Apple Mini Strudel,2.0,2.0,2.0
+tim-hortons,Baked Goods & Desserts,Oatmeal Raisin Spice Cookie,10.0,10.0,6.0
+tim-hortons,Baked Goods & Desserts,Peanut Butter Cookie,12.0,12.0,8.0
+tim-hortons,Baked Goods & Desserts,Raisin Bran Muffin,16.0,16.0,10.0
+tim-hortons,Baked Goods & Desserts,Raisin Tea Biscuit,9.0,9.0,7.0
+tim-hortons,Baked Goods & Desserts,Cheese Tea Biscuit,9.0,9.0,7.0
+tim-hortons,Baked Goods & Desserts,Whole Grain Pecan Banana Bread Muffin,14.0,14.0,9.0
+tim-hortons,Baked Goods & Desserts,Wild Blueberry Muffin,13.0,13.0,9.0
+tim-hortons,Breakfast,Bagel B.E.L.T.,17.0,17.0,14.0
+tim-hortons,Breakfast,Egg & Cheese Bagel Sandwich,10.0,12.0,10.0
+tim-hortons,Breakfast,"Bacon, Egg & Cheese Bagel Sandwich",12.0,14.0,12.0
+tim-hortons,Breakfast,"Sausage, Egg & Cheese Bagel Sandwich",16.0,18.0,15.0
+tim-hortons,Breakfast,Egg & Cheese Biscuit Sandwich,10.0,12.0,9.0
+tim-hortons,Breakfast,Simply Sausage Biscuit Sandwich,14.0,14.0,10.0
+tim-hortons,Breakfast,"Bacon, Egg & Cheese Biscuit Sandwich",12.0,14.0,11.0
+tim-hortons,Breakfast,"Sausage, Egg & Cheese Biscuit Sandwich",16.0,18.0,14.0
+tim-hortons,Breakfast,Egg & Cheese Croissant Sandwich,13.0,15.0,11.0
+tim-hortons,Breakfast,"Bacon, Egg & Cheese Croissant Sandwich",15.0,17.0,13.0
+tim-hortons,Breakfast,"Sausage, Egg & Cheese Croissant Sandwich",19.0,21.0,16.0
+tim-hortons,Breakfast,Egg & Cheese English Muffin Sandwich,7.0,9.0,7.0
+tim-hortons,Breakfast,"Bacon, Egg & Cheese English Muffin Sandwich",9.0,11.0,8.0
+tim-hortons,Breakfast,"Sausage, Egg & Cheese English Muffin Sandwich",13.0,15.0,11.0
+tim-hortons,Breakfast,Farmer's Breakfast Sandwich,23.0,23.0,18.0
+tim-hortons,Breakfast,Strawberry Greek Yogurt with Berries & Granola,10.0,10.0,7.0
+tim-hortons,Breakfast,Vanilla Greek Yogurt with Berries & Granola,10.0,10.0,7.0
+tim-hortons,Breakfast,Bacon Grilled Breakfast Wrap,14.0,14.0,11.0
+tim-hortons,Breakfast,Sausage Grilled Breakfast Wrap,18.0,18.0,14.0
+tim-hortons,Breakfast,Grilled Farmer's Breakfast Wrap,22.0,22.0,18.0
+tim-hortons,Breakfast,Harvest Breakfast Sandwich,12.0,13.0,11.0
+tim-hortons,Breakfast,Harvest Farmer's Breakfast Wrap,17.0,18.0,15.0
+tim-hortons,Breakfast,Hash Brown,4.0,4.0,4.0
+tim-hortons,Breakfast,Plain Oatmeal,5.0,5.0,4.0
+tim-hortons,Breakfast,Mixed Berry Oatmeal,8.0,8.0,6.0
+tim-hortons,Breakfast,Maple Oatmeal,9.0,9.0,6.0
+tim-hortons,"Coffee, Espresso & Tea",Americano,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Small Biebs Brew,6.0,6.0,3.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Biebs Brew,8.0,8.0,4.0
+tim-hortons,"Coffee, Espresso & Tea",Large Biebs Brew,12.0,12.0,6.0
+tim-hortons,"Coffee, Espresso & Tea",Small Cafe Mocha,10.0,10.0,5.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Cafe Mocha,15.0,15.0,7.0
+tim-hortons,"Coffee, Espresso & Tea",Large Cafe Mocha,16.0,16.0,8.0
+tim-hortons,"Coffee, Espresso & Tea",Extra Large Cafe Mocha,18.0,18.0,9.0
+tim-hortons,"Coffee, Espresso & Tea",Cappuccino,5.0,5.0,3.0
+tim-hortons,"Coffee, Espresso & Tea",Caramel Iced Latte,11.0,11.0,6.0
+tim-hortons,"Coffee, Espresso & Tea",Caramel Latte,13.0,13.0,7.0
+tim-hortons,"Coffee, Espresso & Tea",Small Dark Roast Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Dark Roast Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Large Dark Roast Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Extra Large Dark Roast Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Small Decaffeinated Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Decaffeinated Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Large Decaffeinated Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Extra Large Decaffeinated Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Espresso,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Small French Vanilla Cappuccino,13.0,13.0,7.0
+tim-hortons,"Coffee, Espresso & Tea",Medium French Vanilla Cappuccino,16.0,16.0,9.0
+tim-hortons,"Coffee, Espresso & Tea",Large French Vanilla Cappuccino,22.0,22.0,12.0
+tim-hortons,"Coffee, Espresso & Tea",Extra Large French Vanilla Cappuccino,28.0,28.0,15.0
+tim-hortons,"Coffee, Espresso & Tea",Small Hot Chocolate,13.0,13.0,6.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Hot Chocolate,16.0,16.0,8.0
+tim-hortons,"Coffee, Espresso & Tea",Large Hot Chocolate,23.0,23.0,11.0
+tim-hortons,"Coffee, Espresso & Tea",Extra Large Hot Chocolate,29.0,29.0,14.0
+tim-hortons,"Coffee, Espresso & Tea",Small Iced Capp,13.0,13.0,7.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Iced Capp,19.0,19.0,9.0
+tim-hortons,"Coffee, Espresso & Tea",Large Iced Capp,25.0,25.0,12.0
+tim-hortons,"Coffee, Espresso & Tea",Small Iced Coffee,6.0,6.0,3.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Iced Coffee,7.0,7.0,4.0
+tim-hortons,"Coffee, Espresso & Tea",Large Iced Coffee,12.0,12.0,7.0
+tim-hortons,"Coffee, Espresso & Tea",Iced Latte,4.0,4.0,3.0
+tim-hortons,"Coffee, Espresso & Tea",Latte,6.0,6.0,4.0
+tim-hortons,"Coffee, Espresso & Tea",Small Mocha Iced Capp,15.0,15.0,8.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Mocha Iced Capp,22.0,22.0,11.0
+tim-hortons,"Coffee, Espresso & Tea",Large Mocha Iced Capp,28.0,28.0,14.0
+tim-hortons,"Coffee, Espresso & Tea",Small Mocha Iced Coffee,7.0,7.0,4.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Mocha Iced Coffee,10.0,10.0,6.0
+tim-hortons,"Coffee, Espresso & Tea",Mocha Iced Coffee,15.0,15.0,9.0
+tim-hortons,"Coffee, Espresso & Tea",Mocha Iced Latte,10.0,10.0,5.0
+tim-hortons,"Coffee, Espresso & Tea",Mocha Latte,11.0,11.0,6.0
+tim-hortons,"Coffee, Espresso & Tea",Small Original Blend Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Original Blend Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Large Original Blend Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Extra Large Original Blend Coffee,0.0,0.0,0.0
+tim-hortons,"Coffee, Espresso & Tea",Small Pumpkin Spice Iced Capp,20.0,20.0,11.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Pumpkin Spice Iced Capp,26.0,26.0,13.0
+tim-hortons,"Coffee, Espresso & Tea",Large Pumpkin Spice Iced Capp,31.0,31.0,16.0
+tim-hortons,"Coffee, Espresso & Tea",Small Pumpkin Spice Latte,12.0,12.0,6.0
+tim-hortons,"Coffee, Espresso & Tea",Medium Pumpkin Spice Latte,16.0,16.0,8.0
+tim-hortons,"Coffee, Espresso & Tea",Large Pumpkin Spice Latte,19.0,19.0,10.0
+tim-hortons,"Coffee, Espresso & Tea",Tea Latte,6.0,6.0,4.0
+tim-hortons,"Coffee, Espresso & Tea",Vanilla Iced Latte,8.0,8.0,4.0
+tim-hortons,"Coffee, Espresso & Tea",Vanilla Latte,9.0,9.0,5.0
+tim-hortons,Donuts,Apple Fritter Donut,12.0,12.0,8.0
+tim-hortons,Donuts,Boston Cream Filled Donut,9.0,9.0,6.0
+tim-hortons,Donuts,Canadian Maple Filled Donut,9.0,9.0,6.0
+tim-hortons,Donuts,Chocolate Cruller,15.0,15.0,9.0
+tim-hortons,Donuts,Chocolate Dip Donut,8.0,8.0,6.0
+tim-hortons,Donuts,Chocolate Eclair,12.0,12.0,8.0
+tim-hortons,Donuts,Chocolate Glazed Donut,12.0,12.0,8.0
+tim-hortons,Donuts,Chocolate Marble Donut,12.0,12.0,8.0
+tim-hortons,Donuts,Coconut Cream Donut,9.0,9.0,6.0
+tim-hortons,Donuts,Double Chocolate Donut,11.0,11.0,7.0
+tim-hortons,Donuts,Easter Nest Dream Donut,16.0,16.0,9.0
+tim-hortons,Donuts,Honey Cruller,12.0,12.0,8.0
+tim-hortons,Donuts,Honey Dip Donut,9.0,9.0,6.0
+tim-hortons,Donuts,Long John,12.0,12.0,7.0
+tim-hortons,Donuts,Maple Cruller,15.0,15.0,9.0
+tim-hortons,Donuts,Maple Dip Donut,8.0,8.0,6.0
+tim-hortons,Donuts,Maple Eclair,12.0,12.0,8.0
+tim-hortons,Donuts,Maple Swirl Donut,9.0,9.0,6.0
+tim-hortons,Donuts,Old Fashion Dip Donut,10.0,10.0,6.0
+tim-hortons,Donuts,Old Fashion Glazed Donut,11.0,11.0,7.0
+tim-hortons,Donuts,Old Fashion Plain Donut,8.0,8.0,5.0
+tim-hortons,Donuts,Raspberry Filled Donut,8.0,8.0,5.0
+tim-hortons,Donuts,Sour Cream Glazed Donut,14.0,14.0,9.0
+tim-hortons,Donuts,Sour Cream Plain Donut,11.0,11.0,7.0
+tim-hortons,Donuts,Strawberry Filled Donut,8.0,8.0,5.0
+tim-hortons,Donuts,Strawberry Shortcake Donut,11.0,11.0,7.0
+tim-hortons,Donuts,Strawberry Vanilla Filled Donut,9.0,9.0,6.0
+tim-hortons,Donuts,Sugar Loop Donut,7.0,7.0,5.0
+tim-hortons,Donuts,Toasted Coconut Timbits,4.0,4.0,3.0
+tim-hortons,Drinks,Apple Juice,7.0,7.0,3.0
+tim-hortons,Drinks,Small Creamy Chocolate Chill,20.0,20.0,10.0
+tim-hortons,Drinks,Medium Creamy Chocolate Chill,28.0,28.0,14.0
+tim-hortons,Drinks,Large Creamy Chocolate Chill,36.0,36.0,18.0
+tim-hortons,Drinks,Small Frozen Lemonade,6.0,6.0,3.0
+tim-hortons,Drinks,Medium Frozen Lemonade,9.0,9.0,5.0
+tim-hortons,Drinks,Large Frozen Lemonade,12.0,12.0,6.0
+tim-hortons,Drinks,Small Mixed Berry Real Fruit Chill,8.0,8.0,4.0
+tim-hortons,Drinks,Medium Mixed Berry Real Fruit Chill,12.0,12.0,5.0
+tim-hortons,Drinks,Large Mixed Berry Real Fruit Chill,15.0,15.0,7.0
+tim-hortons,Drinks,Small Mixed Berry Smoothie with Greek Yogurt,8.0,8.0,4.0
+tim-hortons,Drinks,Medium Mixed Berry Smoothie with Greek Yogurt,12.0,12.0,6.0
+tim-hortons,Drinks,Large Mixed Berry Smoothie with Greek Yogurt,15.0,15.0,8.0
+tim-hortons,Drinks,Orange Juice,8.0,8.0,4.0
+tim-hortons,Drinks,Small Raspberry Frozen Lemonade,7.0,7.0,3.0
+tim-hortons,Drinks,Medium Raspberry Frozen Lemonade,10.0,10.0,4.0
+tim-hortons,Drinks,Large Raspberry Frozen Lemonade,13.0,13.0,6.0
+tim-hortons,Drinks,Small Strawberry Banana Smoothie with Greek Yogurt,7.0,7.0,4.0
+tim-hortons,Drinks,Medium Strawberry Banana Smoothie with Greek Yogurt,11.0,11.0,6.0
+tim-hortons,Drinks,Large Strawberry Banana Smoothie with Greek Yogurt,14.0,14.0,7.0
+tim-hortons,Drinks,Small Tropical Fruit Smoothie with Greek Yogurt,8.0,8.0,4.0
+tim-hortons,Drinks,Medium Tropical Fruit Smoothie with Greek Yogurt,12.0,12.0,6.0
+tim-hortons,Drinks,Large Tropical Fruit Smoothie with Greek Yogurt,15.0,15.0,8.0
+tim-hortons,Drinks,Small Tropical Real Fruit Chill,8.0,8.0,4.0
+tim-hortons,Drinks,Medium Tropical Real Fruit Chill,12.0,12.0,5.0
+tim-hortons,Drinks,Large Tropical Real Fruit Chill,15.0,15.0,7.0
+tim-hortons,Sandwiches and Wraps,Bacon Grilled Cheese Melt,20.0,20.0,16.0
+tim-hortons,Sandwiches and Wraps,BLT Sandwich,12.0,12.0,11.0
+tim-hortons,Sandwiches and Wraps,Chicken Bacon Ranch Wrap,12.0,13.0,11.0
+tim-hortons,Sandwiches and Wraps,Chicken Ranch Wrap Snacker,4.0,5.0,4.0
+tim-hortons,Sandwiches and Wraps,Chicken Salad Wrap,8.0,10.0,9.0
+tim-hortons,Sandwiches and Wraps,Chicken Salad Wrap Snacker,4.0,5.0,5.0
+tim-hortons,Sandwiches and Wraps,Chicken Strips,7.0,8.0,9.0
+tim-hortons,Sandwiches and Wraps,Chipotle Cheddar Chicken Wrap,11.0,13.0,11.0
+tim-hortons,Sandwiches and Wraps,Chipotle Chicken Wrap Snacker,4.0,5.0,5.0
+tim-hortons,Sandwiches and Wraps,Grilled Cheese Melt,16.0,16.0,13.0
+tim-hortons,Sandwiches and Wraps,Ham & Cheddar Sandwich,14.0,14.0,12.0
+tim-hortons,Sandwiches and Wraps,Ham & Cheddar Wrap,12.0,12.0,10.0
+tim-hortons,Sandwiches and Wraps,Turkey Bacon Club Wrap,12.0,12.0,11.0
+tim-hortons,Sandwiches and Wraps,Turkey Melt,15.0,15.0,13.0
+tim-hortons,Sides,Caesar Salad w/ dressing,11.0,11.0,9.0
+tim-hortons,Sides,Garden Salad w/ dressing,5.0,5.0,4.0
+tim-hortons,Sides,Poutine Poutine,17.0,17.0,13.0
+tim-hortons,Sides,Savoury Potato Wedges,8.0,8.0,7.0
+tim-hortons,Sides,White Bun,8.0,8.0,7.0
+tim-hortons,Sides,Whole Wheat Bun,8.0,8.0,7.0
+tim-hortons,Soups,Chicken Noodle Soup,3.0,4.0,3.0
+tim-hortons,Soups,Chili,10.0,10.0,8.0
+tim-hortons,Soups,Cream of Broccoli Soup,5.0,5.0,4.0
+tim-hortons,Soups,East Coast Clam Chowder,6.0,6.0,5.0
+tim-hortons,Soups,Harvest Vegetable Soup,2.0,2.0,2.0
+tim-hortons,Soups,Hearty Potato Bacon Soup,9.0,9.0,6.0
+tim-hortons,Soups,Regular Spicy Thai Chicken Soup,7.0,8.0,6.0
+tim-hortons,Soups,Large Spicy Thai Chicken Soup,11.0,11.0,8.0
+tim-hortons,Timbits,Apple Fritter Timbits,2.0,2.0,1.0
+tim-hortons,Timbits,Birthday Cake Timbits,4.0,4.0,2.0
+tim-hortons,Timbits,Chocolate Glazed Timbits,4.0,4.0,2.0
+tim-hortons,Timbits,Chocolate Snow Ball Timbits,3.0,3.0,2.0
+tim-hortons,Timbits,Chocolate Toasted Coconut Timbits,3.0,3.0,2.0
+tim-hortons,Timbits,Honey Cruller Timbits,3.0,3.0,2.0
+tim-hortons,Timbits,Honey Dip Timbits,2.0,2.0,1.0
+tim-hortons,Timbits,Old Fashion Glazed Timbits,4.0,4.0,2.0
+tim-hortons,Timbits,Old Fashion Plain Timbits,2.0,2.0,2.0
+tim-hortons,Timbits,Old Fashion Sugar Timbits,2.0,2.0,2.0
+tim-hortons,Timbits,Raspberry Filled Timbits,2.0,2.0,1.0
+tim-hortons,Timbits,Snow Ball Timbits,2.0,2.0,2.0
+tim-hortons,Timbits,Sour Cream Glazed Timbits,4.0,4.0,2.0
+tim-hortons,Timbits,Sour Cream Plain Timbits,3.0,3.0,2.0
+tim-hortons,Timbits,Strawberry Filled Timbits,2.0,2.0,1.0
+tim-hortons,Timbits,Birthday Cake Waffle Timbiebs,3.0,3.0,2.0
+tim-hortons,Timbits,Chocolate White Fudge Timbiebs,4.0,4.0,3.0
+tim-hortons,Timbits,Sour Cream Chocolate Chip Timbiebs,5.0,5.0,3.0
+tim-hortons,Timbits,Venetian Cream Filled Timbits,2.0,2.0,1.0
+tim-hortons,Toppings and Spreads,Butter,3.0,3.0,2.0
+tim-hortons,Toppings and Spreads,Light Plain Cream Cheese,4.0,4.0,3.0
+tim-hortons,Toppings and Spreads,Plain Cream Cheese,6.0,6.0,3.0
+tim-hortons,Toppings and Spreads,Light Strawberry Cream Cheese,6.0,6.0,4.0
+tim-hortons,Toppings and Spreads,Herb and Garlic Cream Cheese,7.0,7.0,4.0
+tim-hortons,Toppings and Spreads,Margarine,2.0,2.0,2.0
+tim-hortons,Toppings and Spreads,Peanut Butter,3.0,3.0,3.0
+tim-hortons,Toppings and Spreads,Strawberry Jam,3.0,3.0,2.0
