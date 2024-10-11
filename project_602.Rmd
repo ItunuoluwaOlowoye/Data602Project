@@ -1,0 +1,114 @@
+---
+title: "eda"
+author: "Vrinda"
+date: "2024-10-10"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library('ggvis')
+library('tidyverse')
+library('ggplot2')
+library('stats')
+library('dplyr')
+library('corrplot')
+
+# read the file 
+fast_food= read.csv("C:\\Users\\Vrinda\\Downloads\\FastFoodNutritionMenuV3.csv", header=T, na.strings='')
+
+# checking the data
+head(fast_food)
+
+#for evaluating the structure of data
+str(fast_food)
+
+# converting string column to numeric
+i <- c(3,4,5,6,7,8,9,10,11,12,13,14)  
+fast_food[, i] <- apply(fast_food[, i], 2, function(x) as.numeric(as.character(x)))
+                 
+sapply(fast_food, class)
+
+str(fast_food)
+
+#summary of dataset
+summary(fast_food)
+
+#assigning string to factors
+fast_food$Company = as.factor(fast_food$Company)
+fast_food$Item = as.factor(fast_food$Item)
+
+str(fast_food)
+
+#checking null values
+colSums(is.na(fast_food))
+
+#dropping calories.from.fat column
+df = subset(fast_food,select = -c(Calories.from.Fat))
+
+head(df)
+
+#removing na values
+#df = na.omit(df)
+
+head(df)
+
+#checking correlation between columns
+correlation_table = cor(df[,3:13],use = 'complete.obs')
+print(correlation_table)
+```
+**UNSATURATED FAT**: These are the good fats, and doctors say they should be the majority of fat that people eat. For cooking, they usually come in the form of liquid oils, not solid fats. Unsaturated fats are listed on food packages as polyunsaturated fats and monounsaturated fats.
+
+**SATURATED FAT**: These fats are often derived from animals and generally take a more solid form. They raise "bad" cholesterol and can contribute to heart disease. The government recommends that saturated fats make up less than 10 per cent of daily calories. Common sources include:
+
+ + high-fat cheeses
+ + high-fat cuts of meat
+ + whole-fat milk and cream and ice cream
+ + butter
+ + palm and coconut oils
+ 
+**TRANS FAT**: These are the worst fats, and the FDA is forcing food companies to phase them out. They are made when hydrogen is added to vegetable oil, usually to create a certain consistency or increase shelf life, and they are also called partially hydrogenated oils. Many of them have already been phased out, but foods that are more likely to contain trans fats are:
+
+ + fried items
+ + pie crusts
+ + stick margarine
+ + ready-to-use frosting
+ + coffee creamers
+ + some microwave popcorn and frozen pizza
+ some cakes, crackers and cookies
+```{r}
+#check few column relationship through graph
+ggplot(df,aes(x = Trans.Fat..g.,y = Protein..g. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'protein vs trans_fat')
+
+ggplot(df,aes(x = Saturated.Fat..g.,y = Protein..g. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'protein vs saturated_fat')
+
+ggplot(df,aes(x = Calories,y = Protein..g. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'protein vs calories')
+
+ggplot(df,aes(x = Cholesterol..mg.,y = Protein..g. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'protein vs cholestrol')
+
+ggplot(df,aes(x =  Fiber..g.,y = Protein..g. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'protein vs fiber')
+
+
+
+
+
+ggplot(df,aes(x = Trans.Fat..g.,y = Sodium...mg. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'sodium vs trans_fat')
+
+ggplot(df,aes(x = Saturated.Fat..g.,y = Sodium...mg. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'sodium vs saturated_fat')
+
+ggplot(df,aes(x = Calories,y = Sodium...mg. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'sodium vs calories')
+
+ggplot(df,aes(x = Cholesterol..mg.,y = Sodium...mg. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'sodium vs cholestrol')
+
+ggplot(df,aes(x =  Fiber..g.,y = Sodium...mg. ))+geom_point(alpha = 0.5)+geom_smooth(method = 'lm',se = TRUE,color ='red')+labs(title = 'sodium vs fiber')
+
+```
+
+
+
+
