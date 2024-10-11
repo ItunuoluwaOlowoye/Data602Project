@@ -1,0 +1,244 @@
+---
+title: "602 Project"
+author: "Eisha Imran Chaudhry"
+date: "2024-10-10"
+output:
+  pdf_document: default
+  html_document: default
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+# Fast Food Nutrition \| Data Analysis
+
+## Introduction
+
+In this project, we analyze the **Fast Food Nutrition** dataset to explore the relationship between various nutritional components in fast food items and investigate their potential impact on public health.
+The dataset includes information on calories, fat, carbohydrates, and other nutritional facts for various fast food items from multiple chains.
+Our main objective is to conduct an exploratory data analysis (EDA) and develop a regression model to understand how certain factors influence calories and other variables.
+
+We'll focus on answering the following **research questions**:
+
+1.  What are the main drivers of calorie content in fast food items?
+2.  Is there a statistically significant relationship between the fat content and calorie count?
+3.  How do nutritional components, such as carbohydrates and protein, correlate with calories?
+
+```{r}
+options(repos = c(CRAN = "https://cloud.r-project.org/"))
+```
+
+# Load Libraries and Dataset
+
+```{r setup, include=FALSE}
+# Install necessary packages if not already installed
+if (!require(ggplot2)) install.packages("ggplot2", dependencies=TRUE)
+if (!require(fastDummies)) install.packages("fastDummies", dependencies=TRUE)
+if (!require(dplyr)) install.packages("dplyr", dependencies=TRUE)
+if (!require(mosaic)) install.packages("mosaic", dependencies=TRUE)
+if (!require(corrplot)) install.packages("corrplot", dependencies=TRUE)
+if (!require(reshape2)) install.packages("reshape2", dependencies=TRUE)
+
+# Load libraries
+library(ggplot2)
+library(fastDummies)
+library(dplyr)
+library(mosaic)
+library(corrplot)
+library(reshape2)
+
+
+# Set seed for reproducibility
+set.seed(123)
+```
+
+### Data Loading
+
+```{r}
+# Load the CSV Data 
+fast_food <- read.csv("/Users/eishachaudhry/Downloads/FastFoodNutritionMenuV3.csv")
+```
+
+### Data Inspection
+
+#### Structure and Summary of the Dataset
+
+```{r}
+# Quick look at the dataset
+str(fast_food)
+head(fast_food)
+summary(fast_food)
+colSums(is.na(fast_food))
+
+```
+
+**What are we looking for?** </br> 1- missing values 2- data types are proper 3- summary stats and distribution of different variables
+
+#### Handling Missing Values
+
+```{r}
+# Check for missing values in each column
+colSums(is.na(fast_food))
+
+# Remove rows with missing values
+fastfood_clean <- na.omit(fast_food)
+
+# Recheck for any remaining missing values
+colSums(is.na(fastfood_clean))
+```
+
+```{r}
+head(fastfood_clean)
+colnames(fastfood_clean)
+# Rename columns for easier access
+colnames(fastfood_clean) <- c("Company", "Item", "Calories", "Calories_From_Fat", 
+                         "Total_Fat_g", "Saturated_Fat_g", "Trans_Fat_g", 
+                         "Cholesterol_mg", "Sodium_mg", "Carbs_g", 
+                         "Fiber_g", "Sugars_g", "Protein_g", 
+                         "Weight_Watchers_Points")
+
+# Check the cleaned column names
+colnames(fastfood_clean)
+```
+
+## Visualizing Realtionships between variables
+
+visualize the correlations between:
+
+```         
+•   Calories and Total Fat
+•   Calories and Carbohydrates
+•   Calories and Protein
+```
+
+```{r}
+# Scatter plot of Calories vs Total Fat
+ggplot(fastfood_clean, aes(x = Total_Fat_g, y = Calories)) +
+  geom_point(color = "blue") +
+  labs(title = "Calories vs Total Fat", x = "Total Fat (g)", y = "Calories") +
+  geom_smooth(method = "lm", color = "red")
+
+# Scatter plot of Calories vs Carbohydrates
+ggplot(fastfood_clean, aes(x = Carbs_g, y = Calories)) +
+  geom_point(color = "green") +
+  labs(title = "Calories vs Carbohydrates", x = "Carbohydrates (g)", y = "Calories") +
+  geom_smooth(method = "lm", color = "red")
+
+# Scatter plot of Calories vs Protein
+ggplot(fastfood_clean, aes(x = Protein_g, y = Calories)) +
+  geom_point(color = "purple") +
+  labs(title = "Calories vs Protein", x = "Protein (g)", y = "Calories") +
+  geom_smooth(method = "lm", color = "red")
+```
+
+**Observations:**
+
+-   Calories vs Total Fat: We observe a positive relationship between total fat and calories, with more fat generally leading to higher calorie content. </br>
+-   Calories vs Carbohydrates: A positive trend exists between carbohydrates and calories, suggesting that items with more carbohydrates also tend to have higher calories. </br>
+-   Calories vs Protein: The relationship between protein and calories is also positive, though it may not be as strong as the relationships between fat or carbohydrates and calories.
+
+### Correlation Matrix and Heatmap
+
+```{r}
+# Load necessary libraries
+library(dplyr)
+library(corrplot)
+
+# Check if fastfood_clean is a data frame
+if (!is.data.frame(fastfood_clean)) {
+    fastfood_clean <- as.data.frame(fastfood_clean)
+}
+
+# Check column names
+print(colnames(fastfood_clean))
+
+# Convert relevant columns from character to numeric
+fastfood_clean$Calories <- as.numeric(fastfood_clean$Calories)
+fastfood_clean$Total_Fat_g <- as.numeric(fastfood_clean$Total_Fat_g)
+fastfood_clean$Carbs_g <- as.numeric(fastfood_clean$Carbs_g)
+fastfood_clean$Protein_g <- as.numeric(fastfood_clean$Protein_g)
+fastfood_clean$Sodium_mg <- as.numeric(fastfood_clean$Sodium_mg)
+
+# Using dplyr's select to pick relevant columns
+numeric_df <- dplyr::select(fastfood_clean, Calories, Total_Fat_g, Carbs_g, Protein_g, Sodium_mg)
+
+# Compute correlation matrix
+cor_matrix <- cor(numeric_df, use = "complete.obs")
+
+# Print correlation matrix
+print(cor_matrix)
+
+# Heatmap of the correlation matrix
+corrplot(cor_matrix, method = "color", type = "upper", tl.col = "black", 
+         tl.srt = 45, col = colorRampPalette(c("darkolivegreen3", "white", "aquamarine4"))(200), 
+         addCoef.col = "black")
+```
+
+### Key Observations:
+
+```         
+**1.    Calories and Total Fat (0.841):**
+```
+
+There is a strong positive correlation between calories and total fat.
+This suggests that as the total fat content increases, the calorie content tends to increase as well, indicating that high-fat foods generally have high caloric content.
+</br>
+
+```         
+**2.    Calories and Protein (0.742):**
+```
+
+There is also a significant positive correlation between calories and protein.
+Higher protein foods tend to have higher calorie counts, suggesting that protein-rich fast foods may also be calorically dense.
+</br>
+
+```         
+**3.    Total Fat and Protein (0.806):**
+```
+
+A strong positive correlation exists between total fat and protein.
+This implies that items with more total fat also tend to have higher protein content, which is common in many fast food items that combine fats and proteins (e.g., cheeseburgers).
+</br>
+
+```         
+**4.    Sodium and Total Fat (0.821):**
+```
+
+There is a strong positive correlation between sodium and total fat.
+This suggests that foods with higher fat content often contain higher sodium levels, possibly due to processing methods that enhance flavor.
+</br>
+
+```         
+**5.    Calories and Sodium (0.731):**
+```
+
+There is a substantial positive correlation between calories and sodium.
+Foods that are higher in calories are likely to be higher in sodium, which is common in many fast food items that prioritize flavor.
+</br>
+
+```         
+**6.    Carbohydrates and Other Nutrients:**
+```
+
+Carbohydrates show weak correlations with total fat, protein, and sodium (ranging from 0.14 to 0.17).
+This suggests that carbohydrate content does not strongly influence the other nutritional components in the same way fat and protein do.
+</br>
+
+```         
+**7.    Overall Insights:**
+```
+
+Foods that are high in calories are typically high in total fat and protein, as well as sodium.
+However, carbohydrates do not exhibit strong correlations with these variables, indicating that fast food items may vary in their carbohydrate content independently of fat, protein, and sodium levels.
+</br> </br>
+
+```{r}
+# Install and load the pheatmap package
+install.packages("pheatmap")
+library(pheatmap)
+
+# Create the heatmap using pheatmap
+pheatmap(cor_matrix, display_numbers = TRUE, color = colorRampPalette(c("lightblue", "white", "orange"))(50),
+         main = "Correlation Heatmap")
+
+```
