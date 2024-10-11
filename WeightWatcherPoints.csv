@@ -110,90 +110,235 @@ a-w,Sides,Regular Fries,12.0,12.0,11.0
 a-w,Sides,Onion Rings,16.0,16.0,14.0
 a-w,Sides,Poutine,22.0,22.0,18.0
 a-w,Sides,Root Beer Lollipop,2.0,2.0,1.0
-kfc,Chicken,Extra Crispy Chicken Drumstick,4.0,4.0,4.0
-kfc,Chicken,Extra Crispy Chicken Wing,5.0,5.0,5.0
-kfc,Chicken,Extra Crispy Chicken Thigh,7.0,7.0,7.0
-kfc,Chicken,Extra Crispy Chicken Rib,6.0,7.0,8.0
-kfc,Chicken,Extra Crispy Chicken Keel,8.0,8.0,9.0
-kfc,Chicken,Hot & Spicy Chicken Drumstick,4.0,4.0,4.0
-kfc,Chicken,Hot & Spicy Chicken Wing,6.0,6.0,6.0
-kfc,Chicken,Hot & Spicy Chicken Thigh,9.0,9.0,9.0
-kfc,Chicken,Hot & Spicy Chicken Rib,8.0,9.0,9.0
-kfc,Chicken,Hot & Spicy Chicken Keel,10.0,10.0,11.0
-kfc,Chicken,Original Recipe Chicken Tender,2.0,2.0,3.0
-kfc,Chicken,Original Recipe Chicken Drumstick,3.0,3.0,4.0
-kfc,Chicken,Original Recipe Chicken Wing,4.0,4.0,4.0
-kfc,Chicken,Original Recipe Chicken Thigh,6.0,6.0,6.0
-kfc,Chicken,Original Recipe Chicken Rib,5.0,6.0,7.0
-kfc,Chicken,Original Recipe Chicken Keel,6.0,6.0,7.0
-kfc,Desserts,Chocolate Chip Cookie,6.0,6.0,4.0
-kfc,Desserts,Ice Cream Cone,9.0,9.0,5.0
-kfc,Desserts,Strawberry Swirl Cheesecake,15.0,15.0,9.0
-kfc,Drinks,7UP,15.0,15.0,7.0
-kfc,Drinks,Apple Juice,7.0,7.0,3.0
-kfc,Drinks,Aquafina Water,0.0,0.0,0.0
-kfc,Drinks,Chocolate Milk,8.0,8.0,4.0
-kfc,Drinks,Diet Pepsi,0.0,0.0,0.0
-kfc,Drinks,Dr Pepper,15.0,15.0,7.0
-kfc,Drinks,Lipton Brisk Iced Tea,11.0,11.0,5.0
-kfc,Drinks,Mountain Dew,18.0,18.0,8.0
-kfc,Drinks,Mug Root Beer,16.0,16.0,8.0
-kfc,Drinks,Orange Crush,17.0,17.0,8.0
-kfc,Drinks,Orange Juice,6.0,6.0,3.0
-kfc,Drinks,Pepsi,16.0,16.0,7.0
-kfc,Sandwiches & Wraps,Original Big Crunch Sandwich,16.0,18.0,17.0
-kfc,Sandwiches & Wraps,Spicy Big Crunch Sandwich,18.0,18.0,17.0
-kfc,Sandwiches & Wraps,Double Down,15.0,17.0,16.0
-kfc,Sandwiches & Wraps,Original Double Tender Sandwich,12.0,13.0,13.0
-kfc,Sandwiches & Wraps,Spicy Double Tender Sandwich,13.0,15.0,14.0
-kfc,Sandwiches & Wraps,Original Famous Chicken Sandwich,14.0,15.0,14.0
-kfc,Sandwiches & Wraps,Spicy Famous Chicken Sandwich,14.0,15.0,14.0
-kfc,Sandwiches & Wraps,Original Kentucky Flatbread,7.0,8.0,8.0
-kfc,Sandwiches & Wraps,Spicy Kentucky Flatbread,7.0,9.0,8.0
-kfc,Sandwiches & Wraps,Original Plant Based Sandwich,20.0,20.0,18.0
-kfc,Sandwiches & Wraps,Spicy Plant Based Sandwich,21.0,21.0,19.0
-kfc,Sandwiches & Wraps,Spicy Twister Wrap,16.0,17.0,15.0
-kfc,Sandwiches & Wraps,Twister Wrap,14.0,15.0,14.0
-kfc,Sandwiches & Wraps,Zinger Sandwich,14.0,16.0,15.0
-kfc,Sandwiches & Wraps,Zinger Twister,18.0,20.0,18.0
-kfc,Sides,Carolina Honey Mustard Dipping Sauce,3.0,3.0,2.0
-kfc,Sides,Individual Coleslaw Salad,5.0,5.0,3.0
-kfc,Sides,Medium Coleslaw Salad,10.0,10.0,8.0
-kfc,Sides,Large Coleslaw Salad,19.0,19.0,14.0
-kfc,Sides,Individual French Fries,9.0,9.0,8.0
-kfc,Sides,Medium French Fries,25.0,25.0,23.0
-kfc,Sides,Large French Fries,41.0,41.0,37.0
-kfc,Sides,Extra Large French Fries,70.0,70.0,63.0
-kfc,Sides,Individual Gravy,2.0,2.0,1.0
-kfc,Sides,Medium Gravy,4.0,4.0,3.0
-kfc,Sides,Large Gravy,7.0,7.0,6.0
-kfc,Sides,5 Piece Hot Wings,10.0,10.0,10.0
-kfc,Sides,10 Piece Hot Wings,20.0,20.0,20.0
-kfc,Sides,20 Piece Hot Wings,41.0,41.0,40.0
-kfc,Sides,Kentucky Hot Sauce,0.0,0.0,0.0
-kfc,Sides,Individual Macaroni Salad,5.0,5.0,2.0
-kfc,Sides,Medium Macaroni Salad,11.0,11.0,8.0
-kfc,Sides,Large Macaroni Salad,22.0,22.0,17.0
-kfc,Sides,Individual Mashed Potatoes,1.0,1.0,1.0
-kfc,Sides,Medium Mashed Potatoes,4.0,4.0,3.0
-kfc,Sides,Large Mashed Potatoes,8.0,8.0,7.0
-kfc,Sides,Individual Original Recipe Corn,5.0,5.0,4.0
-kfc,Sides,Medium Original Recipe Corn,16.0,16.0,12.0
-kfc,Sides,Large Original Recipe Corn,25.0,25.0,19.0
-kfc,Sides,Plant Based Popcorn Chicken,13.0,13.0,12.0
-kfc,Sides,Individual Popcorn Chicken,5.0,5.0,5.0
-kfc,Sides,Small Popcorn Chicken,8.0,10.0,10.0
-kfc,Sides,Medium Popcorn Chicken,16.0,20.0,20.0
-kfc,Sides,Large Popcorn Chicken,21.0,27.0,27.0
-kfc,Sides,Original Popcorn Chicken Poutine,26.0,28.0,24.0
-kfc,Sides,Spicy Popcorn Chicken Poutine,34.0,34.0,30.0
-kfc,Sides,Individual Potato Salad,5.0,5.0,4.0
-kfc,Sides,Medium Potato Salad,12.0,12.0,9.0
-kfc,Sides,Large Potato Salad,25.0,25.0,19.0
-kfc,Sides,Poutine,23.0,23.0,20.0
-kfc,Sides,Ranch Dipping Sauce,5.0,5.0,4.0
-kfc,Sides,Southern Plum Dipping Sauce,2.0,2.0,1.0
-kfc,Sides,Sweet & Smoky BBQ Dipping Sauce,2.0,2.0,1.0
+dairy-queen,Blizzards,Mini Choco Brownie Extreme Blizzard,20.0,20.0,12.0
+dairy-queen,Blizzards,Small Choco Brownie Extreme Blizzard,30.0,30.0,18.0
+dairy-queen,Blizzards,Medium Choco Brownie Extreme Blizzard,39.0,39.0,23.0
+dairy-queen,Blizzards,Large Choco Brownie Extreme Blizzard,54.0,54.0,32.0
+dairy-queen,Blizzards,Mini Chocolate Chip Cookie Dough Blizzard,20.0,20.0,12.0
+dairy-queen,Blizzards,Small Chocolate Chip Cookie Dough Blizzard,34.0,34.0,20.0
+dairy-queen,Blizzards,Medium Chocolate Chip Cookie Dough Blizzard,50.0,50.0,29.0
+dairy-queen,Blizzards,Large Chocolate Chip Cookie Dough Blizzard,65.0,65.0,38.0
+dairy-queen,Blizzards,Cotton Candy Blizzard Mini,20.0,20.0,11.0
+dairy-queen,Blizzards,Cotton Candy Blizzard Small,31.0,31.0,17.0
+dairy-queen,Blizzards,Cotton Candy Blizzard Medium,44.0,44.0,25.0
+dairy-queen,Blizzards,Cotton Candy Blizzard Large,59.0,59.0,33.0
+dairy-queen,Blizzards,Mini Frosted Sugar Cookie Blizzard,18.0,18.0,11.0
+dairy-queen,Blizzards,Small Frosted Sugar Cookie Blizzard,33.0,33.0,20.0
+dairy-queen,Blizzards,Medium Frosted Sugar Cookie Blizzard,45.0,45.0,27.0
+dairy-queen,Blizzards,Large Frosted Sugar Cookie Blizzard,58.0,58.0,35.0
+dairy-queen,Blizzards,Girl Guides Chocolatey Mint Blizzard Mini,18.0,18.0,11.0
+dairy-queen,Blizzards,Girl Guides Chocolatey Mint Blizzard Small,32.0,32.0,19.0
+dairy-queen,Blizzards,Girl Guides Chocolatey Mint Blizzard Medium,44.0,44.0,25.0
+dairy-queen,Blizzards,Girl Guides Chocolatey Mint Blizzard Large,57.0,57.0,33.0
+dairy-queen,Blizzards,Mini Mint Oreo Blizzard,20.0,20.0,11.0
+dairy-queen,Blizzards,Small Mint Oreo Blizzard,34.0,34.0,18.0
+dairy-queen,Blizzards,Medium Mint Oreo Blizzard,44.0,44.0,24.0
+dairy-queen,Blizzards,Large Mint Oreo Blizzard,63.0,63.0,34.0
+dairy-queen,Blizzards,Mini Nestle Drumstick with Peanuts Blizzard,20.0,20.0,11.0
+dairy-queen,Blizzards,Small Nestle Drumstick with Peanuts Blizzard,33.0,33.0,20.0
+dairy-queen,Blizzards,Medium Nestle Drumstick with Peanuts Blizzard,50.0,50.0,29.0
+dairy-queen,Blizzards,Large Nestle Drumstick with Peanuts Blizzard,67.0,67.0,39.0
+dairy-queen,Blizzards,Mini Oreo Blizzard,19.0,19.0,11.0
+dairy-queen,Blizzards,Small Oreo Blizzard,31.0,31.0,17.0
+dairy-queen,Blizzards,Medium Oreo Blizzard,41.0,41.0,22.0
+dairy-queen,Blizzards,Large Oreo Blizzard,59.0,59.0,32.0
+dairy-queen,Blizzards,Mini Oreo Dirt Pie Blizzard,22.0,22.0,13.0
+dairy-queen,Blizzards,Small Oreo Dirt Pie Blizzard,40.0,40.0,23.0
+dairy-queen,Blizzards,Medium Oreo Dirt Pie Blizzard,55.0,55.0,32.0
+dairy-queen,Blizzards,Large Oreo Dirt Pie Blizzard,74.0,74.0,43.0
+dairy-queen,Blizzards,Mini Reese Peanut Butter Cups Blizzard,17.0,17.0,10.0
+dairy-queen,Blizzards,Small Reese Peanut Butter Cups Blizzard,28.0,28.0,17.0
+dairy-queen,Blizzards,Medium Reese Peanut Butter Cups Blizzard,36.0,36.0,22.0
+dairy-queen,Blizzards,Large Reese Peanut Butter Cups Blizzard,48.0,48.0,29.0
+dairy-queen,Blizzards,Mini Royal Oreo Blizzard,25.0,25.0,13.0
+dairy-queen,Blizzards,Small Royal Oreo Blizzard,40.0,40.0,22.0
+dairy-queen,Blizzards,Medium Royal Oreo Blizzard,56.0,56.0,30.0
+dairy-queen,Blizzards,Large Royal Oreo Blizzard,70.0,70.0,37.0
+dairy-queen,Blizzards,Mini Royal Reese's Brownie Blizzard,23.0,23.0,15.0
+dairy-queen,Blizzards,Small Royal Reese's Brownie Blizzard,39.0,39.0,24.0
+dairy-queen,Blizzards,Medium Royal Reese's Brownie Blizzard,53.0,53.0,33.0
+dairy-queen,Blizzards,Large Royal Reese's Brownie Blizzard,69.0,69.0,43.0
+dairy-queen,Blizzards,Mini Skor Blizzard,19.0,19.0,11.0
+dairy-queen,Blizzards,Small Skor Blizzard,30.0,30.0,17.0
+dairy-queen,Blizzards,Medium Skor Blizzard,44.0,44.0,24.0
+dairy-queen,Blizzards,Large Skor Blizzard,59.0,59.0,33.0
+dairy-queen,Blizzards,Mini Smarties Blizzard,19.0,19.0,10.0
+dairy-queen,Blizzards,Small Smarties Blizzard,32.0,32.0,18.0
+dairy-queen,Blizzards,Medium Smarties Blizzard,44.0,44.0,24.0
+dairy-queen,Blizzards,Large Smarties Blizzard,58.0,58.0,32.0
+dairy-queen,Blizzards,Mini Strawberry Cheesecake Blizzard,15.0,15.0,9.0
+dairy-queen,Blizzards,Small Strawberry Cheesecake Blizzard,25.0,25.0,15.0
+dairy-queen,Blizzards,Medium Strawberry Cheesecake Blizzard,33.0,33.0,19.0
+dairy-queen,Blizzards,Large Strawberry Cheesecake Blizzard,44.0,44.0,26.0
+dairy-queen,Blizzards,Mini Turtles with Pecans Blizzard,18.0,18.0,11.0
+dairy-queen,Blizzards,Small Turtles with Pecans Blizzard,33.0,33.0,20.0
+dairy-queen,Blizzards,Medium Turtles with Pecans Blizzard,45.0,45.0,27.0
+dairy-queen,Blizzards,Large Turtles with Pecans Blizzard,60.0,60.0,36.0
+dairy-queen,Blizzards,Mini Very Cherry Chip Blizzard,16.0,16.0,9.0
+dairy-queen,Blizzards,Small Very Cherry Chip Blizzard,28.0,28.0,16.0
+dairy-queen,Blizzards,Medium Very Cherry Chip Blizzard,37.0,37.0,21.0
+dairy-queen,Blizzards,Large Very Cherry Chip Blizzard,47.0,47.0,27.0
+dairy-queen,Burgers and Sandwiches,Double Bacon Two Cheese Deluxe Stackburger,22.0,22.0,19.0
+dairy-queen,Burgers and Sandwiches,Triple Bacon Two Cheese Deluxe Stackburger,28.0,28.0,24.0
+dairy-queen,Burgers and Sandwiches,1/2 lb Cheese GrillBurger,26.0,26.0,22.0
+dairy-queen,Burgers and Sandwiches,Cheeseburger,12.0,12.0,10.0
+dairy-queen,Burgers and Sandwiches,Crispy Chicken Sandwich,13.0,14.0,13.0
+dairy-queen,Burgers and Sandwiches,Double Cheeseburger,17.0,17.0,14.0
+dairy-queen,Burgers and Sandwiches,Double FlameThrower Stackburger,23.0,23.0,20.0
+dairy-queen,Burgers and Sandwiches,Triple FlameThrower Stackburger,29.0,29.0,25.0
+dairy-queen,Burgers and Sandwiches,Grilled Chicken Sandwich,10.0,11.0,11.0
+dairy-queen,Burgers and Sandwiches,Double Loaded Steakhouse Stackburger,26.0,26.0,22.0
+dairy-queen,Burgers and Sandwiches,Triple Loaded Steakhouse Stackburger,32.0,32.0,27.0
+dairy-queen,Burgers and Sandwiches,Double Mushroom Cheeseburger Stackburger,19.0,19.0,16.0
+dairy-queen,Burgers and Sandwiches,Triple Mushroom Cheeseburger Stackburger,25.0,25.0,21.0
+dairy-queen,Burgers and Sandwiches,Double Two Cheese Deluxe Stackburger,19.0,19.0,16.0
+dairy-queen,Burgers and Sandwiches,Triple Two Cheese Deluxe Stackburger,26.0,26.0,22.0
+dairy-queen,Burgers and Sandwiches,Ultimate GrillBurger,21.0,21.0,17.0
+dairy-queen,Chicken Strips,4 Piece Chicken Strip Basket,23.0,25.0,22.0
+dairy-queen,Chicken Strips,6 piece Chicken Strip Basket,30.0,33.0,30.0
+dairy-queen,Chicken Strips,4 Piece Honey BBQ Glazed Chicken Strip Basket,24.0,27.0,23.0
+dairy-queen,Chicken Strips,6 piece Honey BBQ Glazed Chicken Strip Basket,34.0,37.0,31.0
+dairy-queen,Chicken Strips,6 Piece Rotisserie-Style Chicken Bites,1.0,3.0,4.0
+dairy-queen,Chicken Strips,8 Piece Rotisserie-Style Chicken Bites,2.0,4.0,5.0
+dairy-queen,Chicken Strips,6 Piece Rotisserie-Style Chicken Bites Basket,10.0,11.0,11.0
+dairy-queen,Chicken Strips,8 Piece Rotisserie-Style Chicken Bites Basket,10.0,12.0,13.0
+dairy-queen,Ice Cream Cones,Kids Butterscotch Dipped Ice Cream Cone,10.0,10.0,6.0
+dairy-queen,Ice Cream Cones,Small Butterscotch Dipped Ice Cream Cone,16.0,16.0,10.0
+dairy-queen,Ice Cream Cones,Medium Butterscotch Dipped Ice Cream Cone,23.0,23.0,13.0
+dairy-queen,Ice Cream Cones,Large Butterscotch Dipped Ice Cream Cone,32.0,32.0,19.0
+dairy-queen,Ice Cream Cones,Kids Chocolate Dipped Ice Cream Cone,10.0,10.0,6.0
+dairy-queen,Ice Cream Cones,Small Chocolate Dipped Ice Cream Cone,16.0,16.0,9.0
+dairy-queen,Ice Cream Cones,Medium Chocolate Dipped Ice Cream Cone,23.0,23.0,13.0
+dairy-queen,Ice Cream Cones,Large Chocolate Dipped Ice Cream Cone,32.0,32.0,19.0
+dairy-queen,Ice Cream Cones,Kids Fruity Blast Dipped Cone,10.0,10.0,6.0
+dairy-queen,Ice Cream Cones,Small Fruity Blast Dipped Cone,16.0,16.0,10.0
+dairy-queen,Ice Cream Cones,Medium Fruity Blast Dipped Cone,24.0,24.0,14.0
+dairy-queen,Ice Cream Cones,Large Fruity Blast Dipped Cone,33.0,33.0,19.0
+dairy-queen,Ice Cream Cones,Kids Vanilla Ice Cream Cone,8.0,8.0,5.0
+dairy-queen,Ice Cream Cones,Small Vanilla Ice Cream Cone,11.0,11.0,7.0
+dairy-queen,Ice Cream Cones,Medium Vanilla Ice Cream Cone,15.0,15.0,9.0
+dairy-queen,Ice Cream Cones,Large Vanilla Ice Cream Cone,22.0,22.0,13.0
+dairy-queen,Misty Slush,Small Blue Raspberry Misty Slush,12.0,12.0,5.0
+dairy-queen,Misty Slush,Meidum Blue Raspberry Misty Slush,16.0,16.0,7.0
+dairy-queen,Misty Slush,Large Blue Raspberry Misty Slush,21.0,21.0,9.0
+dairy-queen,Misty Slush,Small Cherry Misty Slush,12.0,12.0,5.0
+dairy-queen,Misty Slush,Medium Cherry Misty Slush,16.0,16.0,7.0
+dairy-queen,Misty Slush,Large Cherry Misty Slush,21.0,21.0,9.0
+dairy-queen,Misty Slush,Small Grape Misty Slush,12.0,12.0,5.0
+dairy-queen,Misty Slush,Medium Grape Misty Slush,16.0,16.0,7.0
+dairy-queen,Misty Slush,Large Grape Misty Slush,21.0,21.0,9.0
+dairy-queen,Misty Slush,Small Lemon Lime Misty Slush,12.0,12.0,5.0
+dairy-queen,Misty Slush,Medium Lemon Lime Misty Slush,16.0,16.0,7.0
+dairy-queen,Misty Slush,Large Lemon Lime Misty Slush,21.0,21.0,9.0
+dairy-queen,Misty Slush,Small Misty Float,16.0,16.0,9.0
+dairy-queen,Misty Slush,Medium Misty Float,21.0,21.0,11.0
+dairy-queen,Misty Slush,Large Misty Float,27.0,27.0,14.0
+dairy-queen,Misty Slush,Small Misty Freeze,19.0,19.0,10.0
+dairy-queen,Misty Slush,Medium Misty Freeze,23.0,23.0,13.0
+dairy-queen,Misty Slush,Large Misty Freeze,30.0,30.0,17.0
+dairy-queen,Misty Slush,Small Strawberry Kiwi Misty Slush,12.0,12.0,5.0
+dairy-queen,Misty Slush,Medium Strawberry Kiwi Misty Slush,16.0,16.0,7.0
+dairy-queen,Misty Slush,Large Strawberry Kiwi Misty Slush,21.0,21.0,9.0
+dairy-queen,MooLattes,Small Cappuccino MooLatte,23.0,23.0,13.0
+dairy-queen,MooLattes,Medium Cappuccino MooLatte,29.0,29.0,16.0
+dairy-queen,MooLattes,Large Cappuccino MooLatte,35.0,35.0,19.0
+dairy-queen,MooLattes,Small Caramel MooLatte,26.0,26.0,14.0
+dairy-queen,MooLattes,Medium Caramel MooLatte,33.0,33.0,18.0
+dairy-queen,MooLattes,Large Caramel MooLatte,41.0,41.0,23.0
+dairy-queen,MooLattes,Small Mocha MooLatte,25.0,25.0,14.0
+dairy-queen,MooLattes,Medium Mocha MooLatte,34.0,34.0,19.0
+dairy-queen,MooLattes,Large Mocha MooLatte,40.0,40.0,23.0
+dairy-queen,MooLattes,Small Vanilla MooLatte,25.0,25.0,13.0
+dairy-queen,MooLattes,Medium Vanilla MooLatte,31.0,31.0,17.0
+dairy-queen,MooLattes,Large Vanilla MooLatte,39.0,39.0,21.0
+dairy-queen,Novelties,Buster Bar,22.0,22.0,13.0
+dairy-queen,Novelties,Dilly Bar,10.0,10.0,5.0
+dairy-queen,Novelties,Fudge Bar,2.0,2.0,2.0
+dairy-queen,Novelties,Ice Cream Sandwich,8.0,8.0,5.0
+dairy-queen,Novelties,Non-Dairy Dilly Bar,13.0,13.0,7.0
+dairy-queen,Novelties,Vanilla Orange Bar,2.0,2.0,2.0
+dairy-queen,Orange Julius,Small Mango Pineapple Julius,14.0,14.0,6.0
+dairy-queen,Orange Julius,Medium Mango Pineapple Julius,19.0,19.0,9.0
+dairy-queen,Orange Julius,Large Mango Pineapple Julius,28.0,28.0,13.0
+dairy-queen,Orange Julius,Small Mango Pineapple Smoothie,14.0,14.0,7.0
+dairy-queen,Orange Julius,Medium Mango Pineapple Smoothie,18.0,18.0,9.0
+dairy-queen,Orange Julius,Large Mango Pineapple Smoothie,22.0,22.0,12.0
+dairy-queen,Orange Julius,Extra Large Mango Pineapple Smoothie,32.0,32.0,16.0
+dairy-queen,Orange Julius,Small Orange Julius,11.0,11.0,5.0
+dairy-queen,Orange Julius,Medium Orange Julius,15.0,15.0,7.0
+dairy-queen,Orange Julius,Large Orange Julius,23.0,23.0,11.0
+dairy-queen,Orange Julius,Small Strawberry Banana Smoothie,14.0,14.0,7.0
+dairy-queen,Orange Julius,Medium Strawberry Banana Smoothie,19.0,19.0,10.0
+dairy-queen,Orange Julius,Large Strawberry Banana Smoothie,23.0,23.0,12.0
+dairy-queen,Orange Julius,Extra Large Strawberry Banana Smoothie,32.0,32.0,17.0
+dairy-queen,Orange Julius,Small Strawberry Julius,14.0,14.0,6.0
+dairy-queen,Orange Julius,Medium Strawberry Julius,18.0,18.0,8.0
+dairy-queen,Orange Julius,Large Strawberry Julius,27.0,27.0,12.0
+dairy-queen,Orange Julius,Small Strawberry Smoothie,12.0,12.0,6.0
+dairy-queen,Orange Julius,Medium Strawberry Smoothie,17.0,17.0,9.0
+dairy-queen,Orange Julius,Large Strawberry Smoothie,21.0,21.0,11.0
+dairy-queen,Orange Julius,Extra Large Strawberry Smoothie,29.0,29.0,15.0
+dairy-queen,Shakes,Small Caramel Shake,27.0,27.0,16.0
+dairy-queen,Shakes,Medium Caramel Shake,37.0,37.0,21.0
+dairy-queen,Shakes,Large Caramel Shake,48.0,48.0,28.0
+dairy-queen,Shakes,Small Cherry Shake,25.0,25.0,14.0
+dairy-queen,Shakes,Medium Cherry Shake,32.0,32.0,18.0
+dairy-queen,Shakes,Large Cherry Shake,40.0,40.0,23.0
+dairy-queen,Shakes,Small Chocolate Shake,27.0,27.0,15.0
+dairy-queen,Shakes,Medium Chocolate Shake,36.0,36.0,20.0
+dairy-queen,Shakes,Large Chocolate Shake,46.0,46.0,26.0
+dairy-queen,Shakes,Small Hot Fudge Shake,27.0,27.0,16.0
+dairy-queen,Shakes,Medium Hot Fudge Shake,38.0,38.0,22.0
+dairy-queen,Shakes,Large Hot Fudge Shake,49.0,49.0,28.0
+dairy-queen,Shakes,Small Pumpkin Shake,25.0,25.0,14.0
+dairy-queen,Shakes,Medium Pumpkin Shake,30.0,30.0,17.0
+dairy-queen,Shakes,Large Pumpkin Shake,41.0,41.0,23.0
+dairy-queen,Shakes,Small S'mores Shake,25.0,25.0,18.0
+dairy-queen,Shakes,Medium S'mores Shake,45.0,45.0,26.0
+dairy-queen,Shakes,Large S'mores Shake,61.0,61.0,35.0
+dairy-queen,Shakes,Small Strawberry Shake,24.0,24.0,14.0
+dairy-queen,Shakes,Medium Strawberry Shake,31.0,31.0,18.0
+dairy-queen,Shakes,Large Strawberry Shake,39.0,39.0,22.0
+dairy-queen,Shakes,Small Vanilla Shake,26.0,26.0,15.0
+dairy-queen,Shakes,Medium Vanilla Shake,33.0,33.0,19.0
+dairy-queen,Shakes,Large Vanilla Shake,43.0,43.0,25.0
+dairy-queen,Snacks & Sides,Buffalo Chicken Snack Melt,7.0,8.0,7.0
+dairy-queen,Snacks & Sides,Chicken BBQ Snack Melt,8.0,9.0,7.0
+dairy-queen,Snacks & Sides,Grilled Chicken BLT Salad,5.0,7.0,7.0
+dairy-queen,Snacks & Sides,Crispy Chicken BLT Salad,10.0,11.0,10.0
+dairy-queen,Snacks & Sides,Grilled FlameThrower Chicken Wrap,8.0,9.0,8.0
+dairy-queen,Snacks & Sides,Crispy FlameThrower Chicken Wrap,10.0,11.0,10.0
+dairy-queen,Snacks & Sides,Kids Fries,7.0,7.0,7.0
+dairy-queen,Snacks & Sides,Regular Fries,8.0,8.0,7.0
+dairy-queen,Snacks & Sides,Large Fries,14.0,14.0,12.0
+dairy-queen,Snacks & Sides,Regular Onion Rings,8.0,8.0,7.0
+dairy-queen,Snacks & Sides,Large Onion Rings,17.0,17.0,14.0
+dairy-queen,Snacks & Sides,Potato Skins,8.0,8.0,7.0
+dairy-queen,Snacks & Sides,Poutine,14.0,14.0,12.0
+dairy-queen,Snacks & Sides,Grilled Ranch Chicken Wrap,6.0,7.0,7.0
+dairy-queen,Snacks & Sides,Crispy Ranch Chicken Wrap,9.0,10.0,9.0
+dairy-queen,Snacks & Sides,Soft Pretzel Sticks with Zesty Queso,11.0,11.0,9.0
+dairy-queen,Sundaes & Royal Treats,Banana Split,26.0,26.0,15.0
+dairy-queen,Sundaes & Royal Treats,Brownie and Oreo Cupfection,36.0,36.0,20.0
+dairy-queen,Sundaes & Royal Treats,Small Caramel Sundae,14.0,14.0,8.0
+dairy-queen,Sundaes & Royal Treats,Medium Caramel Sundae,21.0,21.0,12.0
+dairy-queen,Sundaes & Royal Treats,Large Caramel Sundae,30.0,30.0,17.0
+dairy-queen,Sundaes & Royal Treats,Small Cherry Sundae,12.0,12.0,7.0
+dairy-queen,Sundaes & Royal Treats,Medium Cherry Sundae,17.0,17.0,10.0
+dairy-queen,Sundaes & Royal Treats,Large Cherry Sundae,24.0,24.0,14.0
+dairy-queen,Sundaes & Royal Treats,Small Chocolate Sundae,14.0,14.0,8.0
+dairy-queen,Sundaes & Royal Treats,Medium Chocolate Sundae,20.0,20.0,11.0
+dairy-queen,Sundaes & Royal Treats,Large Chocolate Sundae,28.0,28.0,16.0
+dairy-queen,Sundaes & Royal Treats,Small Hot Fudge Sundae,15.0,15.0,9.0
+dairy-queen,Sundaes & Royal Treats,Medium Hot Fudge Sundae,22.0,22.0,12.0
+dairy-queen,Sundaes & Royal Treats,Large Hot Fudge Sundae,30.0,30.0,17.0
+dairy-queen,Sundaes & Royal Treats,Peanut Buster Parfait,34.0,34.0,20.0
+dairy-queen,Sundaes & Royal Treats,Small Pineapple Sundae,12.0,12.0,7.0
+dairy-queen,Sundaes & Royal Treats,Medium Pineapple Sundae,17.0,17.0,9.0
+dairy-queen,Sundaes & Royal Treats,Large Pineapple Sundae,24.0,24.0,14.0
+dairy-queen,Sundaes & Royal Treats,Small Strawberry Sundae,11.0,11.0,7.0
+dairy-queen,Sundaes & Royal Treats,Medium Strawberry Sundae,16.0,16.0,10.0
+dairy-queen,Sundaes & Royal Treats,Large Strawberry Sundae,23.0,23.0,14.0
 mcdonalds,Breakfast,Plain Bacon 'N Egg Bagel,17.0,19.0,15.0
 mcdonalds,Breakfast,Multigrain Bacon 'N Egg Bagel,18.0,20.0,16.0
 mcdonalds,Breakfast,Bacon 'N Egg McMuffin,8.0,10.0,8.0
