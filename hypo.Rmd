@@ -1,0 +1,63 @@
+---
+title: "Untitled"
+author: "Vrinda"
+date: "2024-10-12"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library('ggvis')
+library('tidyverse')
+library('ggplot2')
+library('stats')
+library('dplyr')
+library('corrplot')
+
+# read the file 
+fast_food= read.csv("C:\\Users\\Vrinda\\Downloads\\FastFoodNutritionScraped20241011V2.csv", header=T, na.strings='')
+
+
+```
+**State the hypothesis**
+
+1. Null Hypothesis(Ho) - Mean Trans Fat of the two companies is equal. i.e.$\mu{1}$ = $\mu{2}$
+
+2. Alternative Hypothesis(H1) - Mean Trans fat of the two companies are unequal i.e.$\mu{1}$ $\neq$ $\mu{2}$
+ 
+
+
+
+
+```{r}
+#visualisation to see how trans fat is different based on compnay
+violin_plot <- ggplot(fast_food, aes(x = Company, y = Trans.Fat..g., fill = Company)) +
+geom_violin(trim = FALSE, draw_quantiles = c(0.25, 0.5, 0.75), alpha = 0.7) +
+geom_boxplot(width = 0.1, fill = "white", color = "black", outlier.shape = NA) +
+labs(title = "Violin Plot of Trans Fat by Restaurant",
+x = "Company",
+y = "Trans Fat",
+fill = "Company") +
+theme_minimal()
+print(violin_plot)
+
+
+#splitting the data based on company wise
+company1_data <- fast_food$Trans.Fat..g.[fast_food$Company == 'A&W']
+company2_data <- fast_food$Trans.Fat..g.[fast_food$Company == 'Dairy Queen']
+company3_data <- fast_food$Trans.Fat..g.[fast_food$Company == 'Mcdonalds']
+company4_data <- fast_food$Trans.Fat..g.[fast_food$Company == 'Subway']
+company5_data <- fast_food$Trans.Fat..g.[fast_food$Company == 'Tim Hortons']
+  
+
+
+#check the t- test
+# for A&W and Dairy Queen
+t.test(company1_data, company2_data, alternative = "two.sided")
+```
+As p-value is less than significance level typically 0.05 , We are rejecting the null hypothesis Means there is a significant difference in Trans Fat between A&W and Dairy Queen.
