@@ -1,0 +1,328 @@
+---
+title: "Data602GroupProject"
+author: "Group 4"
+date: "2024-10-11"
+output: 
+  pdf_document:
+    fig_height: 3
+    fig_width: 5
+  html_document:
+    fig_height: 3
+    fig_width: 5
+  word_document:
+    fig_height: 3
+    fig_width: 5
+---
+
+```{r, setup, include=FALSE}
+require(mosaic)
+require(ggformula)
+require(readr)
+require(mosaic)
+require(dplyr)
+require(ggplot2)
+require(gridExtra)
+require(corrplot)
+
+options(scipen = 999)
+set.seed(2021)
+
+theme_set(theme_bw()) # change theme for ggplot2
+trellis.par.set(theme=theme.mosaic()) # change default color scheme for lattice
+
+knitr::opts_chunk$set(
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+```
+
+## Introduction
+
+As graduate students, balancing academic responsibilities and maintaining a healthy lifestyle can become challenging, especially when convenience means grabbing a quick bite to eat for lunch at fast food restaurants like A&W, Diary Queen, McDonald's, Subway or Tim Hortons. They offer easily accessible meals but they come with concerns about their nutritional content, high calorie and processed fat content.
+
+Beyond graduate life, in today's world, we need to have an important discussion about the potential long-term impacts of these foods on our health. With this in mind, our project aims to address the issue of calorie and nutrient awareness among students, and make it easier for us to navigate the complexities of nutrition and fast food choices.
+
+We initially sourced our data from [Kaggle](https://www.kaggle.com/datasets/joebeachcapital/fast-food) using a dataset that provides a breakdown of the nutrient and calorie value of items on the menu of selected fast-food restaurants. This dataset also contained Weight Watcher Points for each menu item. The [Weight Watcher Points](https://www.weightwatchers.com/ca/en/) are a point system program that enables people to easily track their diet and understand the nutrition implications of their fast food choices. People who join the Weight Watcher Program are given a maximum daily and weekly allowance of points.
+
+Within the Kaggle dataset, we noticed that the Weight Watcher Points in this data were more than the actual Weight Watcher Points obtainable. We also noticed that the Weight Watcher Points were oddly similar to the value of the calories for each menu item.
+
+To solvee this, we went to the original website where this information was hosted which is [Fast Food Nutrition's](https://fastfoodnutrition.org/ca/) website. We selected five Canadian fast food restaurants (A&W, Diary Queen, McDonald's, Subway, and Tim Hortons) from this site and webscraped their nutrition and weight watcher points information using Python. The webscrapping codes are available [here](https://github.com/ItunuoluwaOlowoye/Data602Project/blob/main/fast_food_data_mining.ipynb). We then updated our code to reflect this new data.
+
+## Exploratory Data Analysis (EDA)
+
+### Relationship between Calories and Other Nutrients
+
+```{r, warning=FALSE, message=FALSE, include=FALSE}
+fast_food_df = read.csv('FastFoodNutritionScraped20241011V2.csv')
+
+# create plot of calories vs total fat
+cal_fat = ggplot(fast_food_df, aes(x=Total.Fat..g., y=Calories)) +
+  geom_point(alpha=0.5, color='blue') +
+  geom_smooth(method = 'lm', se=FALSE, color='red', formula = 'y ~ x') +
+  labs(title = "Fat Content vs. Calories",
+       x = "Total Fat (g)", y = "Calories")
+
+# create plot of calories vs carbohydrates
+cal_carb = ggplot(fast_food_df, aes(x=Total.Carbohydrates..g.,
+                                    y=Calories)) +
+  geom_point(alpha=0.5, color='blue') +
+  geom_smooth(method = 'lm', se=FALSE, color='red', formula = 'y ~ x') +
+  labs(title = "Carbs Content vs. Calories",
+       x = "Carbohydrates (g)", y = "Calories")
+
+# create plot of calories vs protein
+cal_prot = ggplot(fast_food_df, aes(x=Protein..g., y=Calories)) +
+  geom_point(alpha=0.5, color='blue') +
+  geom_smooth(method = 'lm', se=FALSE, color='red', formula = 'y ~ x') +
+  labs(title = "Protein Content vs. Calories",
+       x = "Protein (g)", y = "Calories")
+
+# create plot of calories vs sodium
+cal_sodium = ggplot(fast_food_df, aes(x=Sodium..mg., y=Calories)) +
+  geom_point(alpha=0.5, color='blue') +
+  labs(title = "Sodium Content vs. Calories",
+       x = "Sodium (mg)", y = "Calories")
+```
+
+```{r, message=FALSE, warning=FALSE}
+grid.arrange(cal_fat, cal_carb, cal_prot, cal_sodium, ncol=2)
+```
+Calories is highly correlated to three major nutrients: Fat, Carbohydrates, and Protein. The more of these nutrients your food contains, the more calories you are eating. For these major nutrients, there are menu items that contain 0g of a single nutrient but has high caloric value. This can imply that their is a multilinear relationship between calories and all these nutrients, not just a single one.
+
+There seems to be two linear trends in the relationship between Calories and Sodium, which almost mimics the trend in Calories and Protein. Sodium is primarily contained in salt and spices. This could imply that the salted items on the menu are generally proteins.
+
+### Processed (Bad) Fats Distributions in Each Restaurant
+
+**Unsaturated Fat**: These are the good fats, and doctors say they should be the majority of fat that people eat. For cooking, they usually come in the form of liquid oils, not solid fats. Unsaturated fats are listed on food packages as polyunsaturated fats and monounsaturated fats.
+
+**Saturated Fat**: These fats are often derived from animals and generally take a more solid form. They raise "bad" cholesterol and can contribute to heart disease. The government recommends that saturated fats make up less than 10 per cent of daily calories. Common sources include: high-fat cheeses, high-fat cuts of meat, whole-fat milk and cream and ice cream, butter, palm and coconut oils etc.
+ 
+**TRANS FAT**: These are the worst fats, and the FDA is forcing food companies to phase them out. They are made when hydrogen is added to vegetable oil, usually to create a certain consistency or increase shelf life, and they are also called partially hydrogenated oils. Many of them have already been phased out, but foods that are more likely to contain trans fats are: fried items, pie crusts, stick margarine, ready-to-use frosting, coffee creamers, some microwave popcorn and frozen pizza, and some cakes, crackers and cookies.
+
+What then is the trans fat content of menu items in these different restaurants?
+
+```{r, include=FALSE}
+# visualization to see how trans fat is different based on company
+trans_fat_violin_plot <- ggplot(fast_food_df, aes(x = Company, y = Trans.Fat..g., fill = Company)) +
+geom_violin(trim = FALSE, draw_quantiles = c(0.25, 0.5, 0.75), alpha = 0.7) +
+geom_boxplot(width = 0.1, fill = "white", color = "black") +
+labs(title = "Violin Plot of Trans Fat Content by Restaurant",
+x = "Company",
+y = "Trans Fat (g)",
+fill = "Company") +
+theme_minimal()
+```
+
+```{r, message=FALSE, warning=FALSE}
+print(trans_fat_violin_plot)
+```
+
+```{r}
+companies = unique(fast_food_df$Company)
+for (company in companies) {
+  cat("Favstats for", company, ":\n")
+  stats = favstats(filter(fast_food_df, Company == company)$Trans.Fat..g., na.rm = TRUE)
+  print(stats)
+}
+```
+It looks like these companies are making efforts to phase out Trans Fat since their central tendencies are less than 0.5g. All of these companies have outliers with items that have more than 1g of trans fat.
+
+A&W and Diary Queen are closest to 0g, generally. We can test this hypothesis later on. McDonald's has the highest median trans fat than the others. Perhaps consider menu items from A&W as a "healthier" alternative to McDonald's.
+
+### Correlations between Selected Nutrients, Calories, and Weight Watcher Points
+
+There are three categories of Weight Watcher Points: Freestyle Points, Smart Points, and Plus Points.
+
+```{r, include=FALSE}
+# create numeric df
+numeric_df <- dplyr::select(fast_food_df, Calories, Total.Fat..g.,
+                            Sodium..mg., Total.Carbohydrates..g.,
+                            Protein..g., FreeStyle.Points, SmartPoints,
+                            PointsPlus)
+
+# Compute correlation matrix
+cor_matrix <- cor(numeric_df, use = "complete.obs", method='pearson')
+```
+
+```{r}
+# Heat map of the correlation matrix
+corrplot(cor_matrix, method = "color", type = "upper", tl.col = "black",
+         tl.srt = 45,
+         col = colorRampPalette(c("darkolivegreen3", "white",
+                                  "aquamarine4"))(200),
+         addCoef.col = "black", addCoefasPercent = TRUE)
+```
+
+From the correlation plot, we see that Calories are highly correlated with Fat and Carbs, with medium correlation to Proteins.
+
+For the Weight Watcher Points categories:
+1. Freestyle Points: Highly correlated with calories and carbohydrates.
+2. SmartPoints: Highly correlated with Calories and Carbohydrates.
+3. PointsPlus: Most correlated with Calories. Good correlations with carbs and fat.
+All the weight watcher point categories are correlatable with calories.
+
+### Relationships between Weight Watcher Points and Calories.
+
+```{r, message=FALSE, warning=FALSE}
+# calories vs freestyle
+fsp = ggplot(fast_food_df,
+             mapping = aes(x = Calories, y = FreeStyle.Points)) + 
+  geom_point() +
+  geom_smooth(mapping = aes(group = Company, color = Company),
+              show.legend = TRUE, method = 'loess', formula = 'y~x')  +
+  labs(title = "Scatter Plot of Calories vs. Weight Watchers Freestyle Points",
+       x = "Calories", y = "Freestyle Points", color = "Company")
+
+# calories vs points plus
+pp = ggplot(fast_food_df,
+             mapping = aes(x = Calories, y = PointsPlus)) + 
+  geom_point() +
+  geom_smooth(mapping = aes(group = Company, color = Company),
+              show.legend = TRUE, method = 'loess', formula = 'y~x')  +
+  labs(title = "Scatter Plot of Calories vs. Weight Watchers Plus Points",
+       x = "Calories", y = "Plus Points", color = "Company")
+
+# calories vs smart points
+sp = ggplot(fast_food_df,
+             mapping = aes(x = Calories, y = SmartPoints)) + 
+  geom_point() +
+  geom_smooth(mapping = aes(group = Company, color = Company),
+              show.legend = TRUE, method = 'loess', formula = 'y~x')  +
+  labs(title = "Scatter Plot of Calories vs. Weight Watchers Smart Points",
+       x = "Calories", y = "Smart Points", color = "Company")
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+print(fsp)
+```
+The calories are highly correlatable with the Freestyle Points but McDonald's trend deviate slightly from that of A&W, Dairy Queen, and Subway.
+
+```{r, message=FALSE, warning=FALSE}
+print(pp)
+```
+The calories are highly correlatable with the Plus Points and all listed rstaurants follow the same trend.
+
+```{r, message=FALSE, warning=FALSE}
+print(sp)
+```
+The calories are highly correlatable with the Smart Points but McDonald's trend deviate slightly from that of A&W, KFC, and Subway.
+
+## Hypothesis Testing
+
+**State the hypothesis**
+
+We identified in the EDA that A&W and Dairy Queen were closer to 0g than other restaurants, We want to test and see whether the trans fat in menu items of both companies are equal, on average.
+
+1. Null Hypothesis(Ho) - Mean Trans Fat of menu items in A&W and Dairy Queen is equal. i.e.$\mu_{aw}$ = $\mu_{dq}$
+
+2. Alternative Hypothesis(H1) - Mean Trans fat of menu items in A&W and Dairy Queen is not equal i.e.$\mu_{aw}$ $\neq$ $\mu_{dq}$
+
+First, check the distribution of Trans Fat.
+
+```{r, include=FALSE}
+hist_tf = ggplot(fast_food_df, aes(x = Trans.Fat..g.)) +
+geom_histogram(bins=20, fill = "skyblue", color = "black", alpha = 0.7) +
+labs(title = "Histogram of Trans Fat Distribution",
+x = "Trans Fat (g)",
+y = "Frequency")
+```
+
+```{r, warning=FALSE}
+print(hist_tf)
+```
+AS the data is right skewed and not normally distributed, we will use bootstrapping to test the hypothesis.
+
+```{r, include=FALSE}
+# splitting the data based on company
+aw_data = fast_food_df$Trans.Fat..g.[fast_food_df$Company == 'A&W']
+dq_data = fast_food_df$Trans.Fat..g.[fast_food_df$Company == 'Dairy Queen']
+# bootstrap test
+n = 100
+b = do(n)*(mean(resample(aw_data,replace = TRUE)) - mean(resample(dq_data,replace = TRUE)))
+```
+
+```{r, warning=FALSE}
+ggplot(b, aes(x=result)) + geom_histogram(fill='blue', bins=20) +
+  labs(title = 'Mean difference in Trans Fat',
+       subtitle = 'Between A&W and Dairy Queen',
+       x = 'Mean Difference', y='Frequency')
+
+# 95% confidence interval
+quantile(b$result, c(0.025,0.975))
+```
+Based on the values of the confidence interval, we have 95% confidence in rejecting the null hypothesis, and we can accept the alternative hypothesis with 5% level of significance. This means that the average trans fat content of items on the menu of A&W and Dairy Queen are not the same. Based on the positive confidence intervals, we can also conclude with 95% confidence that the average trans fat content in A$W is greater than that of Dairy Queen.
+
+## Regression Analysis
+
+From the EDA, since the Calories vs. Plus Points follow the same trend for all listed companies, we can create a regression analysis between the Calories and the Plus Points.
+
+First we can recalculate the correlation coefficient between Calories and Plus Points.
+
+```{r}
+cor(fast_food_df$Calories, fast_food_df$PointsPlus, use='complete.obs',
+    method = 'pearson')
+```
+There is a strong positive linear correlation between Calories and Plus Points.
+
+Next, we visualize the regression line and build a simple linear regression model.
+
+```{r, warning=FALSE}
+ggplot(fast_food_df, mapping = aes(x = Calories, y = PointsPlus)) + 
+  geom_point() +
+  stat_smooth(geom='smooth', method = 'lm', formula = 'y~x')  +
+  labs(title = "Scatter Plot of Calories vs. Weight Watchers Plus Points",
+       x = "Calories", y = "Plus Points")
+reg = lm (PointsPlus ~ Calories, data=fast_food_df)
+print(reg)
+```
+
+Based on the simple linear regression model:
+
+$\widehat{y} = 0.009975 + 0.027144X$ where $\widehat{y}$ is the predicted Weight Watchers Plus Points and X is the caloric value of the menu item. 
+
+Next, we check the significance of the model coefficients.
+```{r}
+summary(reg)$coefficients[, "Pr(>|t|)"]
+```
+The p-value of the intercept is greater than 0, so the intercept model coefficient $\beta_0$ is insignificant.
+The p-value of the calories (independent variable) is 0, so the dependent variable model coefficient $\beta_1$ is significant.
+
+**Essentially, for every 100 calories present in a menu item, you can expect to lose roughly 3 of your Weight Watchers Plus Points.**
+
+Finally, we visualize the residual plots.
+```{r}
+plot(reg)
+```
+The residuals pass the test of independence (Residuals vs Fitted) but fail the test of normality (Q-Q plots) at the extremes.
+
+## Research Question
+
+```{r, include=FALSE}
+plus_points_summary = fast_food_df %>%
+     group_by(Company) %>%
+     summarize(
+         minimum_pp  = min(`PointsPlus`, na.rm = TRUE),
+         median_pp = median(`PointsPlus`, na.rm = TRUE),
+         mean_pp = mean(`PointsPlus`, na.rm = TRUE),
+         max_pp = max(`PointsPlus`, na.rm = TRUE)
+     )
+```
+```{r, warning=FALSE}
+print(plus_points_summary)
+```
+
+Since we do not have the Weight Watcher Points of Tim Hortons, we can use the regression analysis between calories and Weight Watcher Plus Points to predict the points value for items in Tim Hortons' menu.
+
+```{r}
+# extract Tim Hortons Data
+th = filter(fast_food_df, Company == "Tim Hortons")
+
+# predict the plus points
+model_coeff = summary(reg)$coefficients[, "Estimate"]
+th$PointsPlus <- model_coeff[1] + model_coeff[2] * th$Calories
+
+# visualize the predicted Plus Points distribution
+hist(th$PointsPlus, main='Distribution of Predicted Plus Points',
+     xlab = "Predicted Plus Points")
+```
+
