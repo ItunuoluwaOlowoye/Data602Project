@@ -18,6 +18,7 @@ library('ggplot2')
 library('stats')
 library('dplyr')
 library('corrplot')
+library('mosaic')
 
 # read the file 
 fast_food= read.csv("C:\\Users\\Vrinda\\Downloads\\FastFoodNutritionScraped20241011V2.csv", header=T, na.strings='')
@@ -56,8 +57,13 @@ company5_data <- fast_food$Trans.Fat..g.[fast_food$Company == 'Tim Hortons']
   
 
 
-#check the t- test
-# for A&W and Dairy Queen
-t.test(company1_data, company2_data, alternative = "two.sided")
 ```
-As p-value is less than significance level typically 0.05 , We are rejecting the null hypothesis Means there is a significant difference in Trans Fat between A&W and Dairy Queen.
+ AS the data is left skewed we can't use T-test as it is not normally distributed , so we are going with Bootstraping Distribution
+```{r}
+#bootstrap test as the data is not normally distributed
+n = 1000
+b = do(n)*(mean(resample(company1_data,replace = TRUE))- mean(resample(company4_data,replace = TRUE)))
+
+quantile(b$result,c(0.025,0.975))
+```
+As we can see from the confidence interval we have the lower quantile in negative which implies that the mean Of Trans Fat is greater in Subway rather than A&W.
