@@ -86,6 +86,7 @@ cal_sodium = ggplot(fast_food_df, aes(x=Sodium..mg., y=Calories)) +
 ```{r, message=FALSE, warning=FALSE}
 grid.arrange(cal_fat, cal_carb, cal_prot, cal_sodium, ncol=2)
 ```
+
 Calories is highly correlated to three major nutrients: Fat, Carbohydrates, and Protein. The more of these nutrients your food contains, the more calories you are eating. For these major nutrients, there are menu items that contain 0g of a single nutrient but has high caloric value. This can imply that their is a multilinear relationship between calories and all these nutrients, not just a single one.
 
 There seems to be two linear trends in the relationship between Calories and Sodium, which almost mimics the trend in Calories and Protein. Sodium is primarily contained in salt and spices. This could imply that the salted items on the menu are generally proteins.
@@ -124,6 +125,7 @@ for (company in companies) {
   print(stats)
 }
 ```
+
 It looks like these companies are making efforts to phase out Trans Fat since their central tendencies are less than 0.5g. All of these companies have outliers with items that have more than 1g of trans fat.
 
 A&W and Diary Queen are closest to 0g, generally. We can test this hypothesis later on. McDonald's has the highest median trans fat than the others. Perhaps consider menu items from A&W as a "healthier" alternative to McDonald's.
@@ -195,23 +197,26 @@ sp = ggplot(fast_food_df,
 ```{r, message=FALSE, warning=FALSE}
 print(fsp)
 ```
+
 The calories are highly correlatable with the Freestyle Points but McDonald's trend deviate slightly from that of A&W, Dairy Queen, and Subway.
 
 ```{r, message=FALSE, warning=FALSE}
 print(pp)
 ```
-The calories are highly correlatable with the Plus Points and all listed rstaurants follow the same trend.
+
+The calories are highly correlatable with the Plus Points and all listed restaurants follow the same trend.
 
 ```{r, message=FALSE, warning=FALSE}
 print(sp)
 ```
+
 The calories are highly correlatable with the Smart Points but McDonald's trend deviate slightly from that of A&W, KFC, and Subway.
 
 ## Hypothesis Testing
 
 **State the hypothesis**
 
-We identified in the EDA that A&W and Dairy Queen were closer to 0g than other restaurants, We want to test and see whether the trans fat in menu items of both companies are equal, on average.
+We identified in the EDA that the trans fat content of menu items in A&W and Dairy Queen were closer to 0g than other restaurants. We want to test and see whether the trans fat in menu items of both companies are equal, on average.
 
 1. Null Hypothesis(Ho) - Mean Trans Fat of menu items in A&W and Dairy Queen is equal. i.e.$\mu_{aw}$ = $\mu_{dq}$
 
@@ -230,14 +235,16 @@ y = "Frequency")
 ```{r, warning=FALSE}
 print(hist_tf)
 ```
-AS the data is right skewed and not normally distributed, we will use bootstrapping to test the hypothesis.
+AS the data is right skewed and not normally distributed, we will use bootstrapping as a non-parametric approach and permutation test as a parametric approach to test the hypothesis.
+
+### Bootstrapping
 
 ```{r, include=FALSE}
 # splitting the data based on company
 aw_data = fast_food_df$Trans.Fat..g.[fast_food_df$Company == 'A&W']
 dq_data = fast_food_df$Trans.Fat..g.[fast_food_df$Company == 'Dairy Queen']
 # bootstrap test
-n = 100
+n = 1000
 b = do(n)*(mean(resample(aw_data,replace = TRUE)) - mean(resample(dq_data,replace = TRUE)))
 ```
 
@@ -250,7 +257,45 @@ ggplot(b, aes(x=result)) + geom_histogram(fill='blue', bins=20) +
 # 95% confidence interval
 quantile(b$result, c(0.025,0.975))
 ```
-Based on the values of the confidence interval, we have 95% confidence in rejecting the null hypothesis, and we can accept the alternative hypothesis with 5% level of significance. This means that the average trans fat content of items on the menu of A&W and Dairy Queen are not the same. Based on the positive confidence intervals, we can also conclude with 95% confidence that the average trans fat content in A$W is greater than that of Dairy Queen.
+
+### Permutation test
+
+```{r, include=FALSE}
+# observed test statistic
+observed_diff = mean(aw_data) - mean(dq_data)
+# combine both data in to one
+aw_length = length(aw_data)
+all <- c(aw_data, dq_data)
+dq_start = aw_length + 1
+all_length = length(all)
+# Decide number of permutations
+n_perm <- 1000 # this is not the total number of permutations. This is only a portion of it.
+# empty vector to store permutation test statistics
+perm_test_stats <- numeric(n_perm)
+# Permutation test
+for (i in 1:n_perm) {
+# Permute the menu items
+permuted_menu <- sample(all)
+# Calculate the test statistic for the permuted data
+perm_aw <- permuted_menu[1:aw_length]
+perm_dq <- permuted_menu [dq_start:all_length]
+perm_test_stats[i] <- mean(perm_aw) - mean(perm_dq)
+}
+# Calculate the p-value
+p_value = mean(abs(perm_test_stats) >= abs(observed_diff))
+```
+```{r}
+# Display the results from permutation test
+cat("Permutation Test p-value:", p_value)
+```
+
+### Result
+
+Based on the values of the confidence interval and the p-value from the permutation test, we have 95% confidence in rejecting the null hypothesis, and we can accept the alternative hypothesis with 5% level of significance. 
+
+This means that we are 95% confident that the average trans fat content of items on the menu of A&W and Dairy Queen are not the same.
+
+Based on the positive confidence intervals, we can also conclude with 95% confidence that the average trans fat content in A$W is greater than that of Dairy Queen.
 
 ## Regression Analysis
 
@@ -291,7 +336,8 @@ The p-value of the calories (independent variable) is 0, so the dependent variab
 
 Finally, we visualize the residual plots.
 ```{r}
-plot(reg)
+plot(reg, which=1)
+plot(reg, which=2)
 ```
 The residuals pass the test of independence (Residuals vs Fitted) but fail the test of normality (Q-Q plots) at the extremes.
 
