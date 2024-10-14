@@ -87,9 +87,10 @@ cal_sodium = ggplot(fast_food_df, aes(x=Sodium..mg., y=Calories)) +
 grid.arrange(cal_fat, cal_carb, cal_prot, cal_sodium, ncol=2)
 ```
 
-Calories is highly correlated to three major nutrients: Fat, Carbohydrates, and Protein. The more of these nutrients your food contains, the more calories you are eating. For these major nutrients, there are menu items that contain 0g of a single nutrient but has high caloric value. This can imply that their is a multilinear relationship between calories and all these nutrients, not just a single one.
+Calories is highly correlated to three major nutrients: Fat, Carbohydrates, and Protein. The more of these nutrients your food contains, the more calories you are eating. For these major nutrients, there are menu items that contain 0g of a single nutrient but has high caloric value. This can imply that there is a multilinear relationship between calories and all these nutrients, not just a single one which we will address with a multilinear regression analysis later on.
 
 There seems to be two linear trends in the relationship between Calories and Sodium, which almost mimics the trend in Calories and Protein. Sodium is primarily contained in salt and spices. This could imply that the salted items on the menu are generally proteins.
+
 
 ### Processed (Bad) Fats Distributions in Each Restaurant
 
@@ -242,7 +243,7 @@ AS the data is right skewed and not normally distributed, we will use bootstrapp
 ```{r, include=FALSE}
 # splitting the data based on company
 aw_data = fast_food_df$Trans.Fat..g.[fast_food_df$Company == 'A&W']
-dq_data = fast_food_df$Trans.Fat..g.[fast_food_df$Company == 'Dairy Queen']
+dq_data = fast_food_df$Trans.Fat..g.[fast_food_df$Company == 'Subway']
 # bootstrap test
 n = 1000
 b = do(n)*(mean(resample(aw_data,replace = TRUE)) - mean(resample(dq_data,replace = TRUE)))
@@ -251,7 +252,7 @@ b = do(n)*(mean(resample(aw_data,replace = TRUE)) - mean(resample(dq_data,replac
 ```{r, warning=FALSE}
 ggplot(b, aes(x=result)) + geom_histogram(fill='blue', bins=20) +
   labs(title = 'Mean difference in Trans Fat',
-       subtitle = 'Between A&W and Dairy Queen',
+       subtitle = 'Between A&W and Subway',
        x = 'Mean Difference', y='Frequency')
 
 # 95% confidence interval
@@ -282,7 +283,7 @@ perm_dq <- permuted_menu [dq_start:all_length]
 perm_test_stats[i] <- mean(perm_aw) - mean(perm_dq)
 }
 # Calculate the p-value
-p_value = mean(abs(perm_test_stats) >= abs(observed_diff))
+p_value = mean(perm_test_stats >= observed_diff)
 ```
 ```{r}
 # Display the results from permutation test
@@ -295,9 +296,58 @@ Based on the values of the confidence interval and the p-value from the permutat
 
 This means that we are 95% confident that the average trans fat content of items on the menu of A&W and Dairy Queen are not the same.
 
-Based on the positive confidence intervals, we can also conclude with 95% confidence that the average trans fat content in A$W is greater than that of Dairy Queen.
+Based on the fact that the confidence intervals contains negative values, we can also conclude with 95% confidence that the average trans fat content in Subway is greater than that of A&W.
 
 ## Regression Analysis
+
+### Carbohydrates, Fat, Protein and Calories
+
+We identified that calories were highly correlated with fat, protein, and carbohydrates. We can create a multilinear regression analysis between these nutrients and the calories.
+
+First we can recalculate the correlation coefficient between these nutrients and Calories.
+
+```{r}
+fat_cal_cor = cor(fast_food_df$Total.Fat..g., fast_food_df$Calories,
+                  use='complete.obs', method = 'pearson')
+prot_cal_cor = cor(fast_food_df$Protein..g., fast_food_df$Calories,
+                  use='complete.obs', method = 'pearson')
+carb_cal_cor = cor(fast_food_df$Total.Carbohydrates..g., 
+                   method = 'pearson',
+                   fast_food_df$Calories, use='complete.obs')
+cat("The linear correlation between calories and fat is", fat_cal_cor,
+    "that of calories and protein is", prot_cal_cor,
+    "and that of calories and carbohydrates is", carb_cal_cor)
+```
+
+Next, we build a multi linear regression model.
+
+```{r, warning=FALSE}
+ml_reg = lm (Calories ~ Total.Carbohydrates..g. + Protein..g. +
+               Total.Fat..g., data=fast_food_df)
+print(ml_reg)
+```
+
+Based on the multi linear regression model:
+
+$\widehat{y} = 5.516 + 3.847C + 4.204P + 8.643F$ where $\widehat{y}$ is the predicted Calories, C is carbohydrate content, P is the protein content, and F is the fat content. 
+
+Next, we check the significance of the model coefficients.
+```{r}
+summary(ml_reg)$coefficients[, "Pr(>|t|)"]
+```
+The p-value of the intercept is greater than 0, so the intercept model coefficient $\beta_0$ is insignificant.
+The p-value of the model coefficients of all dependent variables is 0, so the dependent variable model coefficient $\beta_1$ is significant.
+
+**Essentially, for every 1g of carbohydrates, you can expect to add roughly 4 calories in a menu item, for every 1g of protein, you expect to add 4 calories, and for every 1g of Fat, you expect to add, you can expect to lose roughly 3 of your Weight Watchers Plus Points.**
+
+Finally, we visualize the residual plots.
+```{r}
+plot(ml_reg, which=1)
+plot(ml_reg, which=2)
+```
+The residuals pass the test of independence (Residuals vs Fitted). According to the Q-Q plot, it seems fairly normal but there are outliers at the extremes.
+
+### Calories and Weight Watchers Plus Points Calories
 
 From the EDA, since the Calories vs. Plus Points follow the same trend for all listed companies, we can create a regression analysis between the Calories and the Plus Points.
 
@@ -339,7 +389,7 @@ Finally, we visualize the residual plots.
 plot(reg, which=1)
 plot(reg, which=2)
 ```
-The residuals pass the test of independence (Residuals vs Fitted) but fail the test of normality (Q-Q plots) at the extremes.
+The residuals pass the test of independence (Residuals vs Fitted). From the Q-Q plot, it seems fairly normal but with outliers at the extremes.
 
 ## Research Question
 
