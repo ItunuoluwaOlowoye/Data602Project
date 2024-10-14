@@ -368,7 +368,7 @@ Finally, we visualize the residual plots.
 plot(ml_reg, which=1)
 plot(ml_reg, which=2)
 ```
-The residuals pass the test of independence (Residuals vs Fitted). According to the Q-Q plot, it seems fairly normal but there are outliers at the extremes.
+The residuals pass the test of independence (Residuals vs Fitted). According to the Q-Q plot, it seems fairly normal but there are outliers at the extremes. Also, the scale-location plot shows no funneling effect, which means there's generally constant variance in residuals, as it should be.
 
 ### Calories and Weight Watchers Plus Points Calories
 
@@ -402,8 +402,8 @@ Next, we check the significance of the model coefficients.
 ```{r}
 summary(reg)$coefficients[, "Pr(>|t|)"]
 ```
-The p-value of the intercept is greater than 0, so the intercept model coefficient $\beta_0$ is insignificant.
-The p-value of the calories (independent variable) is 0, so the dependent variable model coefficient $\beta_1$ is significant.
+The p-value of the intercept is greater than 0.05, so the intercept model coefficient $\beta_0$ is insignificant.
+The p-value of the calories (independent variable) is less than 0.05, so the independent variable model coefficient $\beta_1$ is significant.
 
 **Essentially, for every 100 calories present in a menu item, you can expect to lose roughly 3 of your Weight Watchers Plus Points.**
 
