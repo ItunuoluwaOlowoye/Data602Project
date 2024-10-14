@@ -306,7 +306,7 @@ We identified that calories were highly correlated with fat, protein, and carboh
 
 First we can recalculate the correlation coefficient between these nutrients and Calories.
 
-```{r}
+```{r, include=FALSE}
 fat_cal_cor = cor(fast_food_df$Total.Fat..g., fast_food_df$Calories,
                   use='complete.obs', method = 'pearson')
 prot_cal_cor = cor(fast_food_df$Protein..g., fast_food_df$Calories,
@@ -314,16 +314,39 @@ prot_cal_cor = cor(fast_food_df$Protein..g., fast_food_df$Calories,
 carb_cal_cor = cor(fast_food_df$Total.Carbohydrates..g., 
                    method = 'pearson',
                    fast_food_df$Calories, use='complete.obs')
+```
+```{r}
 cat("The linear correlation between calories and fat is", fat_cal_cor,
-    "that of calories and protein is", prot_cal_cor,
-    "and that of calories and carbohydrates is", carb_cal_cor)
+    "\nthat of calories and protein is", prot_cal_cor,
+    "\nand that of calories and carbohydrates is", carb_cal_cor)
 ```
 
-Next, we build a multi linear regression model.
+Next, we visualize and build a multi linear regression model.
 
-```{r, warning=FALSE}
+```{r, include=FALSE}
+fat = ggplot(fast_food_df, mapping = aes(x = Total.Fat..g.,
+                                         y = Calories)) + 
+  geom_point() +
+  stat_smooth(geom='smooth', method = 'lm', formula = 'y~x')  +
+  labs(title = "Fat vs. Calories",
+       x = "Total Fat (g)", y = "Calories")
+carbs = ggplot(fast_food_df, mapping = aes(x = Total.Carbohydrates..g.,
+                                           y = Calories)) + 
+  geom_point() +
+  stat_smooth(geom='smooth', method = 'lm', formula = 'y~x')  +
+  labs(title = "Carbohydrates vs. Calories",
+       x = "Total Carbohydrates (g)", y = "Calories")
+protein = ggplot(fast_food_df, mapping = aes(x = Protein..g.,
+                                             y = Calories)) + 
+  geom_point() +
+  stat_smooth(geom='smooth', method = 'lm', formula = 'y~x')  +
+  labs(title = "Protein vs. Calories",
+       x = "Protein (g)", y = "Calories")
 ml_reg = lm (Calories ~ Total.Carbohydrates..g. + Protein..g. +
                Total.Fat..g., data=fast_food_df)
+```
+```{r}
+grid.arrange(fat, carbs, protein, ncol=3)
 print(ml_reg)
 ```
 
