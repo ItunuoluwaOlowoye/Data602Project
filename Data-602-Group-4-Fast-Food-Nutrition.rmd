@@ -430,12 +430,24 @@ plus_points_summary = fast_food_df %>%
 print(plus_points_summary)
 ```
 
-Since we do not have the Weight Watcher Points of Tim Hortons, we can use the regression analysis between calories and Weight Watcher Plus Points to predict the points value for items in Tim Hortons' menu.
+Since we do not have the Weight Watcher Points of Tim Hortons, we can use the regression analysis between calories and Weight Watcher Plus Points to predict the points value for items in Tim Hortons' menu provided that the calorie values of items in the Tim Hortons menu are within the same range as those from the other restaurants used in the prediction.
 
-```{r}
+```{r, include=FALSE}
 # extract Tim Hortons Data
 th = filter(fast_food_df, Company == "Tim Hortons")
+# remove Tim Hortons data
+not_th = filter(fast_food_df, Company != "Tim Hortons")
+```
 
+```{r}
+cat("The minimum calories from restaurants other than Tim Hortons is",
+    min(not_th$Calories), "\n and the maximum is", max(not_th$Calories))
+cat("\nThe minimum calories from Tim Hortons is",
+    min(th$Calories), "\n and the maximum is", max(th$Calories))
+```
+Since the caloric value of items in Tim Hortons' menu is within the range of those used in the regression model, we can predict the Weight Watchers Plus Points for  all items in Tim Hortons' menu.
+
+```{r}
 # predict the plus points
 model_coeff = summary(reg)$coefficients[, "Estimate"]
 th$PointsPlus <- model_coeff[1] + model_coeff[2] * th$Calories
