@@ -405,6 +405,15 @@ summary(reg)$coefficients[, "Pr(>|t|)"]
 The p-value of the intercept is greater than 0.05, so the intercept model coefficient $\beta_0$ is insignificant.
 The p-value of the calories (independent variable) is less than 0.05, so the independent variable model coefficient $\beta_1$ is significant.
 
+Since, the model coefficient of the calories is significant, we can compute a 95% confidence interval for this model coefficient.
+
+```{r}
+beta_1_CI = confint(reg, "Calories", level=0.95)
+cat("We are 95% confident that the model coefficient of the Calories is
+    in the range (",
+    beta_1_CI[1], ",", beta_1_CI[2], ")")
+```
+
 **Essentially, for every 100 calories present in a menu item, you can expect to lose roughly 3 of your Weight Watchers Plus Points.**
 
 Finally, we visualize the residual plots.
@@ -450,7 +459,12 @@ Since the caloric value of items in Tim Hortons' menu is within the range of tho
 ```{r}
 # predict the plus points
 model_coeff = summary(reg)$coefficients[, "Estimate"]
+
+# point estimate prediction
 th$PointsPlus <- model_coeff[1] + model_coeff[2] * th$Calories
+
+# predictions at 95% confidence interval
+th_pp_pred = predict(reg, newdata = data.frame(Calories = th$Calories), interval = "confidence", level = 0.95)
 
 # visualize the predicted Plus Points distribution
 hist(th$PointsPlus, main='Distribution of Predicted Plus Points',
